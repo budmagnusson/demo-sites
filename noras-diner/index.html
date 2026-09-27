@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nora's Diner — Homestyle Diner in Gretna, Manitoba</title>
+<meta name="description" content="Nora's Diner in Gretna, Manitoba — comfort food by day, candlelight steak, pasta and seafood by night. Rated 4.7/5 from 176 reviews.">
+<style>
+  :root {
+    --cream: #faf6ef;
+    --ink: #3a2e24;
+    --red: #b3372c;
+    --gold: #d9a441;
+    --olive: #6b7a4a;
+    --warm: #f3e8d3;
+    --card: #ffffff;
+    --night: #1f1a16;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  /* ——— Unofficial concept banner ——— */
+  .concept-bar {
+    background: #2b241d;
+    color: #ffe8b3;
+    text-align: center;
+    padding: 10px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .concept-bar strong { color: #fff; }
+  /* ——— Hero ——— */
+  .hero {
+    background: linear-gradient(rgba(31,26,22,.72), rgba(31,26,22,.72)),
+                url("images/breakfast.jpg") center 30% / cover no-repeat,
+                var(--night);
+    color: #fff8ea;
+    text-align: center;
+    padding: 110px 20px 90px;
+  }
+  .hero .kicker {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--gold);
+  }
+  .hero h1 {
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    margin: 14px 0 6px;
+    letter-spacing: 1px;
+  }
+  .hero .rule { color: var(--gold); font-size: 1.4rem; margin: 8px 0 18px; }
+  .hero p.tagline {
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.6vw, 1.45rem);
+    max-width: 640px;
+    margin: 0 auto 30px;
+    color: #f3e8d3;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 14px 34px;
+    border-radius: 40px;
+    margin: 6px 8px;
+    transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { background: #93291f; transform: translateY(-2px); }
+  .btn.ghost { background: transparent; border: 2px solid #fff8ea; }
+  .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  /* ——— Sections ——— */
+  section { padding: 70px 22px; max-width: 1080px; margin: 0 auto; }
+  .eyebrow {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: var(--red);
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+    margin-bottom: 18px;
+  }
+  .lead { font-size: 1.12rem; max-width: 720px; }
+  /* ——— About + photo ——— */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .about-grid img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(58,46,36,.22);
+  }
+  .caption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    color: #8a7a68;
+    margin-top: 8px;
+  }
+  .pillars { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+  .pillars span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background: var(--warm);
+    border: 1px solid #e3d2b4;
+    padding: 8px 16px;
+    border-radius: 24px;
+  }
+  /* ——— Dishes ——— */
+  #menu { background: #fff; }
+  .dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 26px;
+    margin-top: 34px;
+  }
+  .dish {
+    background: var(--cream);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(58,46,36,.12);
+    border: 1px solid #eadfc8;
+  }
+  .dish img { width: 100%; height: 220px; object-fit: cover; display: block; }
+  .dish .body { padding: 22px 24px 26px; }
+  .dish h3 { font-size: 1.35rem; margin-bottom: 8px; }
+  .dish p { font-size: .98rem; color: #5c4f40; }
+  .price-note {
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #6b5d4c;
+    background: var(--warm);
+    border-radius: 10px;
+    padding: 14px 20px;
+  }
+  /* ——— Day & night ——— */
+  .daynight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 30px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(58,46,36,.14);
+  }
+  .dn-panel { padding: 40px 34px; }
+  .dn-panel.day { background: #fff3d9; }
+  .dn-panel.night { background: var(--night); color: #f3e8d3; }
+  .dn-panel h3 { font-size: 1.5rem; margin-bottom: 10px; }
+  .dn-panel.day h3 { color: var(--red); }
+  .dn-panel.night h3 { color: var(--gold); }
+  /* ——— Reviews ——— */
+  #reviews { background: var(--red); color: #fff8ea; text-align: center; }
+  #reviews .eyebrow { color: var(--gold); }
+  .stars { font-size: 2.4rem; color: var(--gold); letter-spacing: 6px; margin: 12px 0; }
+  .score { font-size: 3.2rem; font-weight: bold; }
+  #reviews p { max-width: 640px; margin: 12px auto 0; color: #ffe8d3; font-style: italic; }
+  /* ——— Hours & visit ——— */
+  .hv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid #eadfc8;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(58,46,36,.1);
+  }
+  .hours-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+  .hours-table td { padding: 9px 4px; border-bottom: 1px dashed #e3d2b4; }
+  .hours-table td:last-child { text-align: right; font-weight: bold; }
+  .call-details { color: #8a7a68; font-style: italic; }
+  .contact-list { list-style: none; font-size: 1.05rem; }
+  .contact-list li { margin: 14px 0; }
+  .contact-list a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red); }
+  .contact-list a:hover { color: #93291f; }
+  .payments {
+    margin-top: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #6b5d4c;
+  }
+  /* ——— Footer ——— */
+  footer {
+    background: var(--night);
+    color: #b9a98f;
+    text-align: center;
+    padding: 44px 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+  }
+  footer .name { color: #fff8ea; font-family: Georgia, serif; font-size: 1.5rem; margin-bottom: 10px; }
+  @media (max-width: 760px) {
+    .about-grid, .hv-grid, .daynight { grid-template-columns: 1fr; }
+    .hero { padding: 80px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <strong>Unofficial Concept</strong> &nbsp;·&nbsp; This is a design mockup created for Nora's Diner — not their real website.
+</div>
+
+<header class="hero">
+  <div class="kicker">Homestyle Diner · Gretna, Manitoba</div>
+  <h1>Nora's Diner</h1>
+  <div class="rule">✦ ✦ ✦</div>
+  <p class="tagline">Comfort food by day, candlelight steak, pasta and seafood by night.</p>
+  <a class="btn" href="tel:+12043275366">Call to Reserve</a>
+  <a class="btn ghost" href="#menu">See the Highlights</a>
+</header>
+
+<section id="about">
+  <div class="about-grid">
+    <div>
+      <div class="eyebrow">About Nora's</div>
+      <h2>A Small-Town Gem Worth the Trip</h2>
+      <p class="lead">
+        Nora's in Gretna is a hidden gem — amazing food, friendly service, and the
+        kind of warm, welcoming atmosphere that keeps locals and travelers coming
+        back for more. From hearty breakfasts to professional-quality cooking,
+        every visit is a delightful dining experience.
+      </p>
+      <div class="pillars">
+        <span>Homestyle cooking</span>
+        <span>Friendly service</span>
+        <span>Reasonable prices</span>
+      </div>
+    </div>
+    <div>
+      <img src="images/breakfast.jpg" alt="A classic Nora's breakfast plate with eggs, hash browns, bacon, toast and coffee">
+      <div class="caption">Breakfast at Nora's — photo from the diner's Google listing.</div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="eyebrow">Menu Highlights</div>
+  <h2>Guest Favourites</h2>
+  <p class="lead">A few of the dishes Nora's is known for — comfort classics done right.</p>
+  <div class="dish-grid">
+    <article class="dish">
+      <img src="images/skillet.svg" alt="Illustration of a hearty breakfast skillet">
+      <div class="body">
+        <h3>Lazy Sunday Skillet</h3>
+        <p>The star of the breakfast menu — a top-notch skillet that's well above standard fare.</p>
+      </div>
+    </article>
+    <article class="dish">
+      <img src="images/fish-chips.svg" alt="Illustration of fish and chips">
+      <div class="body">
+        <h3>Fish and Chips</h3>
+        <p>A signature dish and a must-try — delicious and well worth the trip to Gretna.</p>
+      </div>
+    </article>
+    <article class="dish">
+      <img src="images/shrimp.svg" alt="Illustration of Wham Bam shrimp">
+      <div class="body">
+        <h3>Wham Bam Shrimp</h3>
+        <p>A guest favourite with a name that says it all — full of flavour and bite.</p>
+      </div>
+    </article>
+  </div>
+  <div class="price-note">
+    Meals at Nora's are friendly on the wallet — most plates fall in the <strong>$11–$25</strong> range.
+    <br><span style="font-size:12.5px;">Dish images are illustrations; the breakfast photo above is a real photo from Nora's Google listing.</span>
+  </div>
+</section>
+
+<section id="daynight">
+  <div class="eyebrow">Two Moods, One Diner</div>
+  <h2>By Day &amp; By Night</h2>
+  <div class="daynight">
+    <div class="dn-panel day">
+      <h3>☀ Comfort Food by Day</h3>
+      <p>Start your morning with a proper homestyle breakfast — the Lazy Sunday skillet leads a menu of warm, uncomplicated favourites that taste like home.</p>
+    </div>
+    <div class="dn-panel night">
+      <h3>🕯 Candlelight by Night</h3>
+      <p>Evenings at Nora's turn a little more elegant: candlelight steak, pasta and seafood, served with the same friendly small-town warmth.</p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="eyebrow">What Guests Say</div>
+  <h2 style="color:#fff8ea;">Loved by Locals &amp; Travelers</h2>
+  <div class="stars">★★★★★</div>
+  <div class="score">4.7 / 5</div>
+  <p>"A hidden gem" — from 176 reviews, guests praise the amazing food, friendly service, and reasonable prices that make Nora's a must-visit spot in Gretna.</p>
+</section>
+
+<section id="visit">
+  <div class="eyebrow">Hours &amp; Visit</div>
+  <h2>Come See Us</h2>
+  <div class="hv-grid">
+    <div class="card">
+      <h3 style="margin-bottom:14px;">Opening Hours</h3>
+      <table class="hours-table">
+        <tr><td>Wednesday</td><td>8:00 AM – 7:00 PM</td></tr>
+        <tr><td>Thursday</td><td>8:00 AM – 7:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Saturday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Sunday – Tuesday</td><td class="call-details">call for details</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:10px;">Find &amp; Contact</h3>
+      <ul class="contact-list">
+        <li>📍 <a href="https://www.google.com/maps/search/?api=1&query=Nora%27s+Diner+616+7th+St+Gretna+MB" target="_blank" rel="noopener">616 7th St, Gretna, MB R0G 0V0</a></li>
+        <li>📞 <a href="tel:+12043275366">204-327-5366</a></li>
+        <li>✉️ <a href="mailto:norasdiner@gmail.com">norasdiner@gmail.com</a></li>
+      </ul>
+      <div class="payments">Visa and Mastercard accepted.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="name">Nora's Diner</div>
+  616 7th St, Gretna, MB R0G 0V0 · 204-327-5366
+  <br><br>
+  This page is an <strong>unofficial concept mockup</strong> created as a design proposal — it is not Nora's Diner's real website.
+</footer>
+
+</body>
+</html>
