@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>798 Emerson — Chinese Food, Sushi &amp; Ramen in Emerson, Manitoba</title>
+<meta name="description" content="798 Emerson in Emerson, Manitoba — Chinese food, fresh sushi rolls, ramen and a weekend lunch buffet. Rated 5.0/5 from 14 reviews.">
+<style>
+  :root {
+    --cream: #faf5ec;
+    --ink: #2c1f1a;
+    --red: #a52a1e;
+    --gold: #d9a441;
+    --warm: #f3e6cc;
+    --card: #ffffff;
+    --night: #211712;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  /* ——— Unofficial concept banner ——— */
+  .concept-bar {
+    background: #211712;
+    color: #ffe8b3;
+    text-align: center;
+    padding: 10px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .concept-bar strong { color: #fff; }
+  /* ——— Hero ——— */
+  .hero {
+    background: linear-gradient(rgba(33,23,18,.62), rgba(33,23,18,.62)),
+                url("images/sushi.jpg") center 35% / cover no-repeat,
+                var(--night);
+    color: #fff8ea;
+    text-align: center;
+    padding: 110px 20px 90px;
+  }
+  .hero .kicker {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--gold);
+  }
+  .hero h1 {
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    margin: 14px 0 6px;
+    letter-spacing: 1px;
+  }
+  .hero .rule { color: var(--gold); font-size: 1.4rem; margin: 8px 0 18px; }
+  .hero p.tagline {
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.6vw, 1.45rem);
+    max-width: 640px;
+    margin: 0 auto 30px;
+    color: #f3e6cc;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 14px 34px;
+    border-radius: 40px;
+    margin: 6px 8px;
+    transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { background: #7e1f16; transform: translateY(-2px); }
+  .btn.ghost { background: transparent; border: 2px solid #fff8ea; }
+  .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  /* ——— Sections ——— */
+  section { padding: 70px 22px; max-width: 1080px; margin: 0 auto; }
+  .eyebrow {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: var(--red);
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+    margin-bottom: 18px;
+  }
+  .lead { font-size: 1.12rem; max-width: 720px; }
+  /* ——— About + photo ——— */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .about-grid img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgba(44,31,26,.22);
+  }
+  .caption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    color: #8a7a68;
+    margin-top: 8px;
+  }
+  .pillars { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+  .pillars span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background: var(--warm);
+    border: 1px solid #e3cfa8;
+    padding: 8px 16px;
+    border-radius: 24px;
+  }
+  /* ——— Dishes ——— */
+  #menu { background: #fff; }
+  .dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 26px;
+    margin-top: 34px;
+  }
+  .dish {
+    background: var(--cream);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(44,31,26,.12);
+    border: 1px solid #ead9b8;
+  }
+  .dish .body { padding: 22px 24px 26px; }
+  .dish h3 { font-size: 1.35rem; margin-bottom: 8px; }
+  .dish p { font-size: .98rem; color: #5c4f40; }
+  .photo-note {
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #6b5d4c;
+    background: var(--warm);
+    border-radius: 10px;
+    padding: 14px 20px;
+  }
+  /* ——— Border panel ——— */
+  #border { background: var(--night); color: #f3e6cc; }
+  #border .eyebrow { color: var(--gold); }
+  #border h2 { color: #fff8ea; }
+  /* ——— Reviews ——— */
+  #reviews { background: var(--red); color: #fff8ea; text-align: center; }
+  #reviews .eyebrow { color: var(--gold); }
+  .stars { font-size: 2.4rem; color: var(--gold); letter-spacing: 6px; margin: 12px 0; }
+  .score { font-size: 3.2rem; font-weight: bold; }
+  #reviews p { max-width: 640px; margin: 12px auto 0; color: #ffe8b3; font-style: italic; }
+  /* ——— Hours & visit ——— */
+  .hv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid #ead9b8;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(44,31,26,.1);
+  }
+  .hours-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+  .hours-table td { padding: 9px 4px; border-bottom: 1px dashed #e3cfa8; }
+  .hours-table td:last-child { text-align: right; font-weight: bold; }
+  .call-details { color: #8a7a68; font-style: italic; }
+  .contact-list { list-style: none; font-size: 1.05rem; }
+  .contact-list li { margin: 14px 0; }
+  .contact-list a { color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red); }
+  .contact-list a:hover { color: #7e1f16; }
+  /* ——— Footer ——— */
+  footer {
+    background: var(--night);
+    color: #b9a98f;
+    text-align: center;
+    padding: 44px 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+  }
+  footer .name { color: #fff8ea; font-family: Georgia, serif; font-size: 1.5rem; margin-bottom: 10px; }
+  @media (max-width: 760px) {
+    .about-grid, .hv-grid { grid-template-columns: 1fr; }
+    .hero { padding: 80px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="concept-bar">
+  <strong>Unofficial Concept</strong> &nbsp;·&nbsp; This is a design mockup created for 798 Emerson — not their real website.
+</div>
+
+<header class="hero">
+  <div class="kicker">Chinese · Sushi · Ramen · Emerson, Manitoba</div>
+  <h1>798 Emerson</h1>
+  <div class="rule">✦ ✦ ✦</div>
+  <p class="tagline">Chinese food, fresh sushi rolls and ramen — right here in Emerson.</p>
+  <a class="btn" href="tel:+12043732626">Call to Order</a>
+  <a class="btn ghost" href="https://wa.me/14315541106" target="_blank" rel="noopener">WhatsApp Us</a>
+</header>
+
+<section id="about">
+  <div class="about-grid">
+    <div>
+      <div class="eyebrow">About 798</div>
+      <h2>A Hidden Gem at the Border</h2>
+      <p class="lead">
+        798 Emerson is a Chinese restaurant on Dallas Avenue serving up Chinese
+        food, sushi and ramen — from spicy California rolls and Dynamite Crunch
+        to sashimi boxes and a weekend lunch buffet. Friendly owners, generous
+        portions, and flavours that keep locals and travellers coming back.
+      </p>
+      <div class="pillars">
+        <span>Chinese food</span>
+        <span>Fresh sushi</span>
+        <span>Ramen</span>
+        <span>Weekend buffet</span>
+      </div>
+    </div>
+    <div>
+      <img src="images/ramen.jpg" alt="A steaming bowl of ramen with noodles lifted by chopsticks">
+      <div class="caption">Ramen at 798 — photo shown is a sample; swap in your own dishes anytime.</div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="eyebrow">What People Love</div>
+  <h2>Guest Favourites</h2>
+  <p class="lead">A few of the dishes 798 Emerson is known for — straight from their own menu.</p>
+  <div class="dish-grid">
+    <article class="dish">
+      <div class="body">
+        <h3>Sushi Rolls</h3>
+        <p>Spicy Cali, Dynamite Crunch, Teriyaki Chicken Cali — plus rotating new rolls like kimchi and cream cheese.</p>
+      </div>
+    </article>
+    <article class="dish">
+      <div class="body">
+        <h3>Sashimi Box</h3>
+        <p>Fresh sashimi and sushi combos — a favourite for sushi lovers in town.</p>
+      </div>
+    </article>
+    <article class="dish">
+      <div class="body">
+        <h3>Weekend Lunch Buffet</h3>
+        <p>Saturday &amp; Sunday, 11:30 AM – 2:00 PM. A rotating spread with weekly specials like chicken wings.</p>
+      </div>
+    </article>
+    <article class="dish">
+      <div class="body">
+        <h3>Ramen</h3>
+        <p>Hot, hearty ramen bowls — comfort food at its best on a cold prairie day.</p>
+      </div>
+    </article>
+    <article class="dish">
+      <div class="body">
+        <h3>Chinese Classics</h3>
+        <p>Chow mein, fried rice and the familiar favourites that anchor the menu.</p>
+      </div>
+    </article>
+    <article class="dish">
+      <div class="body">
+        <h3>Takeout &amp; Reservations</h3>
+        <p>Dine in, take it to go, or reserve a table — call <a href="tel:+12043732626">204-373-2626</a> or message on WhatsApp.</p>
+      </div>
+    </article>
+  </div>
+  <div class="photo-note">
+    Photos shown are samples — your real dishes would go here.
+  </div>
+</section>
+
+<section id="border">
+  <div class="eyebrow">At the Border</div>
+  <h2>An Easy Stop Crossing the Border</h2>
+  <p class="lead">
+    Sitting right in Emerson, 798 is a natural stop for travellers crossing the
+    border — hot food, fast takeout, and flavours you don't find at a truck stop.
+    A proper website makes it effortless for them to find you before they arrive.
+  </p>
+</section>
+
+<section id="reviews">
+  <div class="eyebrow">What Guests Say</div>
+  <h2 style="color:#fff8ea;">Loved in Emerson</h2>
+  <div class="stars">★★★★★</div>
+  <div class="score">5.0 / 5</div>
+  <p>"Their sushi is delicious and looks amazing" — from 14 reviews, guests praise the fresh sushi, friendly owners and generous portions.</p>
+</section>
+
+<section id="visit">
+  <div class="eyebrow">Hours &amp; Visit</div>
+  <h2>Come See Us</h2>
+  <div class="hv-grid">
+    <div class="card">
+      <h3 style="margin-bottom:14px;">Opening Hours</h3>
+      <table class="hours-table">
+        <tr><td>Saturday – Sunday</td><td>Lunch buffet 11:30 AM – 2:00 PM</td></tr>
+        <tr><td>Tuesday – Saturday</td><td>10:00 AM – 9:30 PM</td></tr>
+        <tr><td>Sunday</td><td>9:30 AM – 7:30 PM</td></tr>
+        <tr><td>Monday</td><td class="call-details">call for details</td></tr>
+      </table>
+      <p class="call-details" style="margin-top:12px;">Hours can change — call to confirm.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:10px;">Find &amp; Contact</h3>
+      <ul class="contact-list">
+        <li>📍 <a href="https://www.google.com/maps/search/?api=1&query=798+Emerson+365+Dallas+Ave+Emerson+MB" target="_blank" rel="noopener">365 Dallas Ave, Emerson, MB R0A 0L0</a></li>
+        <li>📞 <a href="tel:+12043732626">204-373-2626</a></li>
+        <li>💬 <a href="https://wa.me/14315541106" target="_blank" rel="noopener">WhatsApp: 431-554-1106</a></li>
+        <li>📘 <a href="https://www.facebook.com/p/798-Emerson-Chinese-Restaurant-61567159361937/" target="_blank" rel="noopener">798 Emerson on Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="name">798 Emerson</div>
+  365 Dallas Ave, Emerson, MB R0A 0L0 · 204-373-2626
+  <br><br>
+  This page is an <strong>unofficial concept mockup</strong> created as a design proposal — it is not 798 Emerson's real website.
+</footer>
+
+</body>
+</html>
