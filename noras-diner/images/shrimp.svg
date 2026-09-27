@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" role="img" aria-label="Illustration of Wham Bam shrimp">
+  <rect width="800" height="620" fill="#fdf1e6"/>
+  <!-- bowl -->
+  <ellipse cx="400" cy="420" rx="280" ry="120" fill="#b3372c"/>
+  <ellipse cx="400" cy="380" rx="280" ry="115" fill="#d65348"/>
+  <ellipse cx="400" cy="375" rx="240" ry="92" fill="#a82f25"/>
+  <!-- sauce surface -->
+  <ellipse cx="400" cy="372" rx="215" ry="80" fill="#e0684f"/>
+  <!-- shrimp -->
+  <g>
+    <path d="M300 350 q-20 -70 40 -95 q45 -18 60 10 q-30 60 -60 95 z" fill="#f28c5b" stroke="#c95f33" stroke-width="6"/>
+    <circle cx="352" cy="272" r="8" fill="#3a2e24"/>
+    <path d="M380 290 q30 25 20 60" fill="none" stroke="#c95f33" stroke-width="5"/>
+  </g>
+  <g>
+    <path d="M430 360 q-10 -75 55 -90 q48 -12 58 18 q-38 55 -72 92 z" fill="#f28c5b" stroke="#c95f33" stroke-width="6"/>
+    <circle cx="486" cy="288" r="8" fill="#3a2e24"/>
+    <path d="M500 310 q25 28 14 62" fill="none" stroke="#c95f33" stroke-width="5"/>
+  </g>
+  <g>
+    <path d="M250 400 q-30 -60 25 -90 q42 -22 60 5 q-25 58 -48 92 z" fill="#f79a68" stroke="#c95f33" stroke-width="6"/>
+    <circle cx="308" cy="315" r="8" fill="#3a2e24"/>
+  </g>
+  <g>
+    <path d="M490 410 q0 -68 60 -85 q45 -12 55 18 q-35 55 -68 90 z" fill="#f79a68" stroke="#c95f33" stroke-width="6"/>
+    <circle cx="560" cy="345" r="8" fill="#3a2e24"/>
+  </g>
+  <!-- garnish -->
+  <g fill="#6b7a4a">
+    <ellipse cx="370" cy="400" rx="26" ry="10" transform="rotate(20 370 400)"/>
+    <ellipse cx="450" cy="415" rx="26" ry="10" transform="rotate(-25 450 415)"/>
+    <ellipse cx="410" cy="350" rx="26" ry="10" transform="rotate(45 410 350)"/>
+  </g>
+  <!-- chili accents -->
+  <g fill="#b3372c">
+    <circle cx="330" cy="385" r="10"/>
+    <circle cx="480" cy="385" r="10"/>
+    <circle cx="410" cy="420" r="10"/>
+  </g>
+  <!-- steam -->
+  <g stroke="#d8c3a5" stroke-width="10" stroke-linecap="round" fill="none" opacity=".9">
+    <path d="M330 210 q18 -28 0 -56 q-18 -28 0 -56"/>
+    <path d="M450 205 q18 -28 0 -56 q-18 -28 0 -56"/>
+  </g>
+  <text x="400" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#8a7a68" font-style="italic">Wham Bam Shrimp</text>
+</svg>

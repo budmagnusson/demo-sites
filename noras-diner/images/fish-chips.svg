@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" role="img" aria-label="Illustration of fish and chips">
+  <rect width="800" height="620" fill="#f4f1ea"/>
+  <!-- plate -->
+  <ellipse cx="400" cy="380" rx="300" ry="150" fill="#ffffff" stroke="#dcd6c8" stroke-width="6"/>
+  <ellipse cx="400" cy="380" rx="230" ry="105" fill="none" stroke="#e8e2d4" stroke-width="4"/>
+  <!-- chips -->
+  <g fill="#e8b84b">
+    <rect x="220" y="400" width="120" height="34" rx="14" transform="rotate(-12 280 417)"/>
+    <rect x="260" y="430" width="130" height="34" rx="14" transform="rotate(8 325 447)"/>
+    <rect x="200" y="350" width="110" height="34" rx="14" transform="rotate(18 255 367)"/>
+    <rect x="420" y="440" width="120" height="34" rx="14" transform="rotate(-8 480 457)"/>
+    <rect x="470" y="395" width="110" height="34" rx="14" transform="rotate(14 525 412)"/>
+    <rect x="300" y="380" width="120" height="34" rx="14" transform="rotate(-20 360 397)"/>
+  </g>
+  <!-- fish fillets -->
+  <g>
+    <path d="M250 300 q40 -60 150 -60 q130 0 170 45 q-40 55 -160 55 q-120 0 -160 -40 z" fill="#d9a441"/>
+    <path d="M265 295 q45 -50 140 -50 q115 0 150 38" fill="none" stroke="#b57e2e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M280 330 q50 -45 135 -45 q110 0 140 32" fill="none" stroke="#b57e2e" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g>
+    <path d="M330 250 q40 -50 140 -50 q120 0 150 40 q-45 48 -150 48 q-105 0 -140 -38 z" fill="#e2b155"/>
+    <path d="M345 245 q45 -42 130 -42 q105 0 130 33" fill="none" stroke="#b57e2e" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- tartar cup -->
+  <g>
+    <rect x="560" y="380" width="90" height="70" rx="12" fill="#ffffff" stroke="#dcd6c8" stroke-width="5"/>
+    <ellipse cx="605" cy="380" rx="45" ry="14" fill="#f7f3ea" stroke="#dcd6c8" stroke-width="4"/>
+    <circle cx="590" cy="376" r="5" fill="#6b7a4a"/>
+    <circle cx="615" cy="380" r="5" fill="#6b7a4a"/>
+    <circle cx="605" cy="372" r="5" fill="#b3372c"/>
+  </g>
+  <!-- lemon wedge -->
+  <path d="M520 300 l90 0 a90 60 0 0 1 -90 60 z" fill="#f6d95e" stroke="#d9a441" stroke-width="6"/>
+  <line x1="520" y1="300" x2="565" y2="360" stroke="#d9a441" stroke-width="5"/>
+  <line x1="565" y1="300" x2="565" y2="358" stroke="#d9a441" stroke-width="5"/>
+  <!-- steam -->
+  <g stroke="#cbbfa8" stroke-width="10" stroke-linecap="round" fill="none" opacity=".8">
+    <path d="M330 160 q18 -28 0 -56 q-18 -28 0 -56"/>
+    <path d="M460 170 q18 -28 0 -56 q-18 -28 0 -56"/>
+  </g>
+  <text x="400" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#8a7a68" font-style="italic">Fish and Chips</text>
+</svg>

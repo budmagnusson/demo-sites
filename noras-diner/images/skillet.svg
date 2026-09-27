@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" role="img" aria-label="Illustration of a hearty breakfast skillet">
+  <rect width="800" height="620" fill="#f7ead6"/>
+  <!-- table -->
+  <ellipse cx="400" cy="540" rx="330" ry="48" fill="#e6d3b3"/>
+  <!-- skillet handle -->
+  <rect x="560" y="210" width="180" height="46" rx="23" fill="#4a4a52"/>
+  <!-- skillet body -->
+  <ellipse cx="360" cy="360" rx="270" ry="150" fill="#3a3a42"/>
+  <ellipse cx="360" cy="340" rx="245" ry="130" fill="#26262c"/>
+  <!-- food: golden potatoes -->
+  <g fill="#d9a441">
+    <ellipse cx="260" cy="350" rx="52" ry="34"/>
+    <ellipse cx="350" cy="300" rx="58" ry="36"/>
+    <ellipse cx="450" cy="350" rx="55" ry="34"/>
+    <ellipse cx="380" cy="400" rx="60" ry="36"/>
+    <ellipse cx="280" cy="415" rx="48" ry="30"/>
+  </g>
+  <g fill="#b57e2e" opacity=".55">
+    <ellipse cx="260" cy="350" rx="52" ry="34"/>
+    <ellipse cx="450" cy="350" rx="55" ry="34"/>
+  </g>
+  <!-- peppers -->
+  <g fill="#b3372c">
+    <rect x="300" y="330" width="26" height="14" rx="7" transform="rotate(20 313 337)"/>
+    <rect x="430" y="380" width="26" height="14" rx="7" transform="rotate(-15 443 387)"/>
+    <rect x="330" y="420" width="26" height="14" rx="7" transform="rotate(40 343 427)"/>
+  </g>
+  <g fill="#6b7a4a">
+    <rect x="340" y="320" width="26" height="14" rx="7" transform="rotate(-25 353 327)"/>
+    <rect x="410" y="325" width="26" height="14" rx="7" transform="rotate(35 423 332)"/>
+  </g>
+  <!-- sunny-side-up eggs -->
+  <g>
+    <ellipse cx="310" cy="300" rx="62" ry="46" fill="#fdf7ec"/>
+    <ellipse cx="310" cy="300" rx="62" ry="46" fill="none" stroke="#e8dcc4" stroke-width="4"/>
+    <circle cx="310" cy="300" r="24" fill="#f2b134"/>
+  </g>
+  <g>
+    <ellipse cx="470" cy="330" rx="62" ry="46" fill="#fdf7ec"/>
+    <ellipse cx="470" cy="330" rx="62" ry="46" fill="none" stroke="#e8dcc4" stroke-width="4"/>
+    <circle cx="470" cy="330" r="24" fill="#f2b134"/>
+  </g>
+  <!-- steam -->
+  <g stroke="#cbbfa8" stroke-width="10" stroke-linecap="round" fill="none" opacity=".8">
+    <path d="M300 200 q18 -28 0 -56 q-18 -28 0 -56"/>
+    <path d="M420 190 q18 -28 0 -56 q-18 -28 0 -56"/>
+    <path d="M520 205 q18 -28 0 -56 q-18 -28 0 -56"/>
+  </g>
+  <text x="400" y="90" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#8a7a68" font-style="italic">Lazy Sunday Skillet</text>
+</svg>
