@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R P Wiebe Electric — Electrician | Winkler, Manitoba</title>
+<meta name="description" content="R P Wiebe Electric — electrical contractor in Winkler, Manitoba. Call (204) 325-7377.">
+<style>
+:root{
+  --green:#2e5d43; --green-deep:#1b3a29; --warm:#f7f5ee; --amber:#d9a52e;
+  --amber-deep:#a67e1c; --char:#2c2c2c; --muted:#7a7568; --line:#e6dcc6; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--char);background:var(--warm);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.concept-banner{background:var(--green-deep);color:#fff;text-align:center;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 14px}
+.site-head{background:var(--green);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.head-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
+.brand{font-weight:800;font-size:1.35rem}
+.brand span{color:var(--amber)}
+.head-phone{background:var(--amber);color:#1b3a29;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:999px;font-size:1rem;white-space:nowrap}
+.head-phone:hover{background:#f0bc4a}
+.hero{position:relative;color:#fff;padding:110px 0 100px;overflow:hidden;
+  background:linear-gradient(135deg,#3a7556 0%,#2e5d43 50%,#1b3a29 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.13;
+  background-image:repeating-linear-gradient(90deg,transparent,transparent 44px,rgba(255,255,255,.5) 44px,rgba(255,255,255,.5) 46px)}
+.hero-inner{position:relative}
+.eyebrow{display:inline-block;background:rgba(217,165,46,.25);border:1px solid var(--amber);color:#ffe1a8;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:20px}
+.hero h1{font-size:clamp(2rem,5.2vw,3.6rem);line-height:1.12;margin-bottom:16px;max-width:16em}
+.hero h1 em{color:var(--amber);font-style:normal}
+.hero p.lead{font-size:1.12rem;color:#e9e2d1;max-width:34em;margin-bottom:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:999px;font-size:1.02rem}
+.btn-call{background:var(--amber);color:#1b3a29}
+.btn-call:hover{background:#f0bc4a}
+.btn-ghost{border:2px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.trust-row{display:flex;gap:26px;flex-wrap:wrap;margin-top:38px;color:#d3ccb8;font-size:.95rem}
+.trust-row strong{color:#fff}
+.section{padding:78px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 46px}
+.sec-head h2{font-size:clamp(1.6rem,3.4vw,2.4rem);color:var(--green-deep);margin-bottom:12px}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:32px 26px;text-align:center;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(46,93,67,.12)}
+.card .icon{font-size:2.4rem;display:block;margin-bottom:14px}
+.card h3{color:var(--green-deep);font-size:1.1rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.95rem}
+.why{background:var(--green-deep);color:#fff}
+.why .sec-head h2{color:#fff}
+.why .sec-head p{color:#d3ccb8}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr}}
+.why-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:28px 24px}
+.why-item h3{color:var(--amber);font-size:1.05rem;margin-bottom:10px}
+.why-item p{color:#e8e0cc;font-size:.95rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 26px;position:relative}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-20px;left:24px;width:44px;height:44px;border-radius:50%;background:var(--amber);color:#1b3a29;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(217,165,46,.4)}
+.step h3{color:var(--green-deep);margin:8px 0 10px;font-size:1.08rem}
+.step p{color:var(--muted);font-size:.95rem}
+.transform{background:linear-gradient(135deg,#f0ecda 0%,#ebe0c6 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.transform-box{display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+.transform-box>div:first-child{flex:1 1 320px}
+.transform-box h2{color:var(--green-deep);font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:12px}
+.transform-box p{color:var(--muted);margin-bottom:10px}
+.transform-note{background:var(--white);border:1px dashed #c9b07f;border-radius:14px;padding:26px;flex:1 1 280px;color:var(--muted);font-size:.95rem}
+.transform-note strong{color:var(--green-deep)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:760px){.visit{grid-template-columns:1fr}}
+.visit-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:34px 30px}
+.visit-card h3{color:var(--green-deep);font-size:1.2rem;margin-bottom:16px}
+.visit-card p{font-size:.95rem;color:var(--muted);margin:8px 0}
+.visit-card p strong{color:var(--char)}
+.map-wrap{border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:14px 0 6px}
+.map-wrap iframe{width:100%;height:230px;border:0;display:block}
+.big-phone{display:inline-block;font-size:1.5rem;font-weight:800;color:var(--amber-deep);text-decoration:none;margin-top:10px}
+.big-phone:hover{text-decoration:underline}
+footer{background:var(--green-deep);color:#d3ccb8;padding:40px 0 26px}
+.foot-grid{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:20px}
+.foot-grid a{color:#fff;text-decoration:none}
+.fine{font-size:.78rem;color:#968d76;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+</style>
+</head>
+<body>
+
+<div class="concept-banner">Unofficial concept demo — not affiliated with R P Wiebe Electric</div>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <div class="brand">R P Wiebe <span>Electric</span></div>
+    <a class="head-phone" href="tel:+12043257377">Call (204) 325-7377</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Winkler, Manitoba</span>
+    <h1>Power where you need it, <em>done to code.</em></h1>
+    <p class="lead">R P Wiebe Electric is an electrical contractor in Winkler. Residential and commercial electrical work — panels, wiring, and repairs done right.</p>
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:+12043257377">Call (204) 325-7377</a>
+      <a class="btn btn-ghost" href="#services">See Services</a>
+    </div>
+    <div class="trust-row">
+      <div><strong>Local</strong> · Winkler-based</div>
+      <div><strong>Residential</strong> + commercial</div>
+      <div><strong>Repairs</strong> &amp; new work</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="background:#f2e6c8;border-color:var(--amber);color:var(--amber-deep)">What they do</div>
+      <h2>Electrical work that stays invisible</h2>
+      <p>The best electrical work is the kind you never notice. R P Wiebe Electric does it that way.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="icon">🏠</span>
+        <h3>Residential Electrical</h3>
+        <p>Home wiring — new circuits, panel work, outlets, and the repairs that keep your house safe and powered.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🏢</span>
+        <h3>Commercial Electrical</h3>
+        <p>Contractor-grade electrical work for businesses — wired to handle what your building actually draws.</p>
+      </div>
+      <div class="card">
+        <span class="icon">⚡</span>
+        <h3>Repairs &amp; Upgrades</h3>
+        <p>Troubleshooting, dead circuits, and upgrades — the electrical fixes that can't wait, handled fast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why R P Wiebe</div>
+      <h2>A local contractor, not a stranger</h2>
+      <p>When the power's out or the panel's acting up, you want someone close — not a dispatcher two towns over.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>📍 Local to Winkler</h3>
+        <p>Based at 127 Linden Dr in Winkler. Quick to get on-site when electrical work can't wait.</p>
+      </div>
+      <div class="why-item">
+        <h3>🏠🏢 Home &amp; business</h3>
+        <p>Residential and commercial work — one contractor for your house and your building.</p>
+      </div>
+      <div class="why-item">
+        <h3>📞 Straight talk</h3>
+        <p>Call (204) 325-7377 and describe the job. No runaround — a contractor's answer from a contractor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="background:#f2e6c8;border-color:var(--amber);color:var(--amber-deep)">How it works</div>
+      <h2>Getting it fixed is simple</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Call and describe the job</h3>
+        <p>Panel work, new circuits, repairs. (204) 325-7377.</p>
+      </div>
+      <div class="step">
+        <h3>Get it looked at</h3>
+        <p>Diagnosed and quoted straight — what it needs, what it costs, no mystery.</p>
+      </div>
+      <div class="step">
+        <h3>Done to code</h3>
+        <p>Wired, tested, and safe. The kind of work you never have to think about again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section transform">
+  <div class="wrap transform-box">
+    <div>
+      <h2>Photos of finished work build trust</h2>
+      <p>Nobody hires an electrician sight unseen. Photos of panel upgrades and finished jobs are what turn a Google searcher into a caller.</p>
+      <p><strong>This demo ships with a photo-gallery section ready to go</strong> — job photos drop straight in the moment they're provided.</p>
+    </div>
+    <div class="transform-note">
+      <strong>📸 Photo gallery goes here.</strong><br><br>
+      Panel upgrades, finished wiring jobs, lighting installs — before-and-after shots work best. Photos of real local work build the most trust.
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="background:#f2e6c8;border-color:var(--amber);color:var(--amber-deep)">Get in touch</div>
+      <h2>Call when you need them</h2>
+      <p>Residential &amp; commercial electrical — Winkler and surrounding area.</p>
+    </div>
+    <div class="visit">
+      <div class="visit-card">
+        <h3>Find us</h3>
+        <p><strong>127 Linden Dr</strong><br>Winkler, MB</p>
+        <div class="map-wrap"><iframe title="Map — R P Wiebe Electric, Winkler" src="https://www.google.com/maps?q=127%20Linden%20Dr%2C%20Winkler%2C%20MB&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <p>Serving Winkler &amp; surrounding communities</p>
+      </div>
+      <div class="visit-card">
+        <h3>Call today</h3>
+        <p>Residential electrical<br>Commercial electrical<br>Repairs &amp; upgrades</p>
+        <a class="big-phone" href="tel:+12043257377">(204) 325-7377</a>
+        <p style="margin-top:12px">Talk directly to the contractor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <strong style="color:#fff">R P Wiebe Electric</strong><br>
+      Electrical Contractor<br>
+      127 Linden Dr, Winkler, MB<br>
+      <a href="tel:+12043257377">(204) 325-7377</a>
+    </div>
+    <div>
+      Residential Electrical<br>
+      Commercial Electrical<br>
+      Repairs &amp; Upgrades
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="fine">Unofficial concept demo — created to show what's possible. Not affiliated with or endorsed by R P Wiebe Electric.</div>
+  </div>
+</footer>
+
+</body>
+</html>
