@@ -3,292 +3,273 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pioneer Meat | The Original Farmers Sausage — Altona, Manitoba</title>
+<title>Altona Hotel | Stay in the Heart of Altona, Manitoba</title>
 <style>
   :root{
-    --red:#6e1f1f; --red-deep:#471313; --red-700:#8a2b2b;
-    --gold:#d9a441; --gold-light:#f0c778; --cream:#faf5ea; --char:#26211c; --muted:#6f655a;
+    --navy:#1c2b3a; --navy-deep:#121d28; --amber:#d99a2b; --amber-light:#f2c14e;
+    --cream:#faf7ef; --char:#232323; --muted:#66707a;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--char);background:var(--cream);line-height:1.6}
   a{text-decoration:none;color:inherit}
   .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
 
-  .topbar{background:var(--red-deep);color:#ecd9c8;font-size:.82rem}
+  .topbar{background:var(--navy-deep);color:#cfd8e0;font-size:.82rem}
   .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:7px;padding-bottom:7px;flex-wrap:wrap;gap:4px}
-  .topbar a:hover{color:var(--gold-light)}
+  .topbar a:hover{color:var(--amber-light)}
 
-  header.nav{background:rgba(71,19,19,.97);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(0,0,0,.3)}
+  header.nav{background:rgba(18,29,40,.97);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(0,0,0,.25)}
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
   .brand{display:flex;align-items:center;gap:12px;color:#fff}
   .brand-mark{width:42px;height:42px;flex:0 0 42px}
   .brand-name{font-weight:800;font-size:1.3rem;letter-spacing:.5px;line-height:1.1}
-  .brand-name small{display:block;font-weight:600;font-size:.66rem;letter-spacing:3px;color:var(--gold-light)}
-  nav.links{display:flex;gap:26px;color:#f3e9da;font-weight:600;font-size:.95rem}
-  nav.links a:hover{color:var(--gold-light)}
-  .btn{display:inline-block;background:var(--gold);color:#2b1c05;font-weight:800;padding:12px 28px;border-radius:8px;letter-spacing:.3px;transition:transform .15s,box-shadow .15s}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,164,65,.45)}
+  .brand-name small{display:block;font-weight:600;font-size:.66rem;letter-spacing:4px;color:var(--amber-light)}
+  nav.links{display:flex;gap:26px;color:#eef2f5;font-weight:600;font-size:.95rem}
+  nav.links a:hover{color:var(--amber-light)}
+  .btn{display:inline-block;background:var(--amber);color:#241a05;font-weight:800;padding:12px 28px;border-radius:8px;letter-spacing:.3px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.45)}
   .btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
-  .btn.ghost:hover{border-color:var(--gold-light);color:var(--gold-light);box-shadow:none}
+  .btn.ghost:hover{border-color:var(--amber-light);color:var(--amber-light);box-shadow:none}
   .nav-cta{font-size:.9rem;padding:10px 20px}
-  @media(max-width:860px){nav.links{display:none}}
+  @media(max-width:820px){nav.links{display:none}}
 
-  .hero{position:relative;background:linear-gradient(180deg,#471313 0%,#6e1f1f 60%,#8a2b2b 100%);color:#fff;overflow:hidden}
+  .hero{position:relative;background:linear-gradient(180deg,#121d28 0%,#1c2b3a 60%,#2a3f55 100%);color:#fff;overflow:hidden}
   .hero-art{position:absolute;inset:0;pointer-events:none}
-  .hero .wrap{position:relative;padding:92px 22px 100px}
-  .kicker{display:inline-block;background:rgba(217,164,65,.16);border:1px solid var(--gold);color:var(--gold-light);font-weight:700;font-size:.8rem;letter-spacing:2px;padding:7px 16px;border-radius:999px;margin-bottom:22px}
-  .hero h1{font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.05;font-weight:900;letter-spacing:-.5px;max-width:660px}
-  .hero h1 span{color:var(--gold-light)}
-  .hero p.lead{margin:20px 0 34px;max-width:580px;font-size:1.12rem;color:#f0e2cf}
+  .hero .wrap{position:relative;padding:92px 22px 60px}
+  .kicker{display:inline-block;background:rgba(217,154,43,.16);border:1px solid var(--amber);color:var(--amber-light);font-weight:700;font-size:.8rem;letter-spacing:2px;padding:7px 16px;border-radius:999px;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.05;font-weight:900;letter-spacing:-.5px;max-width:640px}
+  .hero h1 span{color:var(--amber-light)}
+  .hero p.lead{margin:20px 0 34px;max-width:560px;font-size:1.12rem;color:#dbe3ea}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-  .hero-badges{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap;color:#ecd9c8;font-size:.9rem}
-  .hero-badges strong{display:block;font-size:1.5rem;color:#fff}
 
-  .stats{background:var(--gold);color:#2b1c05}
+  .booking{background:#fff;border-radius:16px;box-shadow:0 18px 44px rgba(0,0,0,.28);padding:24px;margin-top:44px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;align-items:end;position:relative}
+  @media(max-width:820px){.booking{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.booking{grid-template-columns:1fr}}
+  .booking label{display:block;font-size:.75rem;font-weight:800;letter-spacing:1.5px;color:var(--muted);margin-bottom:6px}
+  .booking input,.booking select{width:100%;padding:13px 14px;border:1.5px solid #dfe3e6;border-radius:8px;font-size:1rem;font-family:inherit;background:var(--cream);color:var(--char)}
+  .booking input:focus,.booking select:focus{outline:none;border-color:var(--amber)}
+  .booking .btn{border:none;cursor:pointer;font-size:1rem;padding:13px 30px;white-space:nowrap}
+
+  .stats{background:var(--amber);color:#241a05}
   .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding-top:26px;padding-bottom:26px;gap:12px}
   .stats strong{font-size:1.9rem;display:block;line-height:1.1}
   .stats span{font-size:.85rem;font-weight:600;letter-spacing:.5px}
   @media(max-width:700px){.stats .wrap{grid-template-columns:repeat(2,1fr);row-gap:20px}}
 
   section.block{padding:84px 0}
-  .eyebrow{color:var(--red-700);font-weight:800;letter-spacing:3px;font-size:.78rem;margin-bottom:12px}
-  h2.title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;letter-spacing:-.5px;margin-bottom:14px;color:var(--red-deep)}
-  p.sub{color:var(--muted);max-width:660px;margin-bottom:44px;font-size:1.05rem}
+  .eyebrow{color:#8a6a1f;font-weight:800;letter-spacing:3px;font-size:.78rem;margin-bottom:12px}
+  h2.title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;letter-spacing:-.5px;margin-bottom:14px;color:var(--navy-deep)}
+  p.sub{color:var(--muted);max-width:640px;margin-bottom:44px;font-size:1.05rem}
 
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:600px){.grid{grid-template-columns:1fr}}
-  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(110,31,31,.08);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
-  .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(110,31,31,.16)}
-  .card-art{height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--red-deep),var(--red-700))}
-  .card-art svg{width:96px;height:96px}
+  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(28,43,58,.08);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(28,43,58,.16)}
+  .card-art{height:170px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy),#2e4358)}
+  .card-art svg{width:110px;height:110px}
   .card-body{padding:26px}
-  .card-body h3{font-size:1.15rem;margin-bottom:8px;color:var(--red-deep)}
-  .card-body p{font-size:.93rem;color:var(--muted);margin-bottom:16px}
-  .card-body a{color:var(--red-700);font-weight:800;font-size:.92rem}
-  .card-body a:hover{color:var(--red-deep)}
-  .tag{display:inline-block;background:#f4e6c8;color:#7a5a12;font-size:.72rem;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+  .card-body h3{font-size:1.2rem;margin-bottom:8px;color:var(--navy-deep)}
+  .card-body p{font-size:.94rem;color:var(--muted);margin-bottom:16px}
+  .card-body a{color:#8a6a1f;font-weight:800;font-size:.92rem}
+  .card-body a:hover{color:var(--navy-deep)}
+  .tag{display:inline-block;background:#f3e7cd;color:#7a5c14;font-size:.75rem;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:999px;margin-bottom:12px}
 
-  .story{background:var(--red-deep);color:#f0e2cf}
-  .story h2.title{color:#fff}
-  .story p.sub{color:#d3b89e}
-  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
-  @media(max-width:760px){.story-grid{grid-template-columns:1fr}}
-  .story-lead{font-size:1.15rem;line-height:1.75}
-  .story-lead strong{color:var(--gold-light)}
-  .values{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:30px}
-  .values h3{color:var(--gold-light);margin-bottom:16px;letter-spacing:1px;font-size:.95rem}
-  .values ul{list-style:none}
-  .values li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.98rem}
-  .values li:last-child{border-bottom:none}
-  .values li::before{content:"✓ ";color:var(--gold-light);font-weight:800}
+  .amen{background:var(--navy-deep);color:#e8edf1}
+  .amen h2.title{color:#fff}
+  .amen p.sub{color:#a9b6c2}
+  .amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  @media(max-width:900px){.amen-grid{grid-template-columns:repeat(2,1fr)}}
+  .amen-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:26px;text-align:center}
+  .amen-item svg{width:52px;height:52px;margin-bottom:12px}
+  .amen-item h3{font-size:1rem;margin-bottom:6px}
+  .amen-item p{font-size:.86rem;color:#a9b6c2}
 
-  .buy{background:#fff;border-radius:18px;box-shadow:0 6px 24px rgba(110,31,31,.08);padding:46px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
-  @media(max-width:760px){.buy{grid-template-columns:1fr;padding:32px}}
-  .buy h3{color:var(--red-deep);font-size:1.5rem;margin-bottom:12px}
-  .buy p{color:var(--muted);margin-bottom:18px}
-  .buy-list{list-style:none;margin-bottom:24px}
-  .buy-list li{padding:8px 0;color:var(--char);font-weight:600}
-  .buy-list li::before{content:"📍 ";}
+  .dine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:800px){.dine-grid{grid-template-columns:1fr}}
+  .dine{background:#fff;border-radius:16px;padding:32px;box-shadow:0 6px 24px rgba(28,43,58,.08);border-top:5px solid var(--amber)}
+  .dine h3{color:var(--navy-deep);margin-bottom:8px;font-size:1.25rem}
+  .dine p{color:var(--muted);font-size:.95rem}
 
-  .wholesale{background:linear-gradient(120deg,var(--gold) 0%,var(--gold-light) 100%);color:#2b1c05;text-align:center}
-  .wholesale h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:12px}
-  .wholesale p{max-width:620px;margin:0 auto 28px;font-weight:600}
-  .wholesale .btn{background:var(--red-deep);color:#fff}
-  .wholesale .btn:hover{box-shadow:0 8px 20px rgba(71,19,19,.4)}
+  .direct{background:linear-gradient(120deg,var(--amber) 0%,var(--amber-light) 100%);color:#241a05;text-align:center}
+  .direct h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:12px}
+  .direct p{max-width:600px;margin:0 auto 28px;font-weight:600}
+  .direct-points{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin-bottom:30px;font-weight:700}
+  .direct .btn{background:var(--navy-deep);color:#fff}
+  .direct .btn:hover{box-shadow:0 8px 20px rgba(18,29,40,.4)}
 
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
   @media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
-  .contact-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 6px 24px rgba(110,31,31,.08)}
-  .contact-card h3{color:var(--red-deep);margin-bottom:14px}
+  .contact-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 6px 24px rgba(28,43,58,.08)}
+  .contact-card h3{color:var(--navy-deep);margin-bottom:14px}
   .contact-card p{margin-bottom:8px;color:var(--muted)}
   .contact-card strong{color:var(--char)}
   form.demo-form{display:flex;flex-direction:column;gap:12px}
-  form.demo-form input,form.demo-form textarea,form.demo-form select{padding:13px 15px;border:1.5px solid #e3d9c8;border-radius:8px;font-size:1rem;font-family:inherit;background:var(--cream)}
-  form.demo-form input:focus,form.demo-form textarea:focus,form.demo-form select:focus{outline:none;border-color:var(--red-700)}
+  form.demo-form input,form.demo-form textarea{padding:13px 15px;border:1.5px solid #dfe3e6;border-radius:8px;font-size:1rem;font-family:inherit;background:var(--cream)}
+  form.demo-form input:focus,form.demo-form textarea:focus{outline:none;border-color:var(--amber)}
   form.demo-form button{border:none;cursor:pointer;font-size:1rem}
 
-  footer{background:#2b0d0d;color:#b89a86;padding:40px 0;font-size:.88rem}
+  footer{background:#0d141c;color:#8fa0af;padding:40px 0;font-size:.88rem}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
-  .demo-tag{margin-top:14px;font-size:.75rem;color:#7d6252}
+  .demo-tag{margin-top:14px;font-size:.75rem;color:#5c6b78}
 </style>
 </head>
 <body>
 
 <div class="topbar">
   <div class="wrap">
-    <span>Made in Altona, Manitoba &nbsp;·&nbsp; (204) 324-5454</span>
-    <span>Toll free 1-800-743-4440 &nbsp;·&nbsp; <a href="mailto:orderdesk@pioneermeat.ca">orderdesk@pioneermeat.ca</a></span>
+    <span>61 Centre Avenue East, Altona, MB &nbsp;·&nbsp; (204) 324-5241</span>
+    <span>24-hour front desk &nbsp;·&nbsp; Free Wi-Fi &amp; parking</span>
   </div>
 </div>
 
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#">
-      <svg class="brand-mark" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="10" fill="#d9a441"/><path d="M24 8 c-8 0 -13 6 -13 14 0 10 8 18 13 18 s13 -8 13 -18 c0 -8 -5 -14 -13 -14 Z" fill="#471313"/><circle cx="24" cy="20" r="4" fill="#d9a441"/></svg>
-      <span class="brand-name">PIONEER<small>MEAT · ALTONA MB</small></span>
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="10" fill="#d99a2b"/><path d="M14 36 V16 h6 v14 h10 v6 H20 v-8" fill="#121d28"/><path d="M32 36 V16 h6 v20 Z" fill="#121d28"/></svg>
+      <span class="brand-name">ALTONA HOTEL<small>ALTONA · MANITOBA</small></span>
     </a>
     <nav class="links">
-      <a href="#products">Our Sausage</a>
-      <a href="#story">Our Story</a>
-      <a href="#buy">Where to Buy</a>
-      <a href="#wholesale">Wholesale</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#dining">Dining</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <a class="btn nav-cta" href="#buy">Find It Near You</a>
+    <a class="btn nav-cta" href="#book">Book Now</a>
   </div>
 </header>
 
-<section class="hero">
-  <svg class="hero-art" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice">
-    <circle cx="1180" cy="160" r="85" fill="#d9a441" opacity=".8"/>
-    <circle cx="1180" cy="160" r="125" fill="#d9a441" opacity=".15"/>
-    <g opacity=".28">
-      <path d="M1050 420 q30 -90 60 0 q30 -90 60 0 q30 -90 60 0 q30 -90 60 0" stroke="#d9a441" stroke-width="10" fill="none" stroke-linecap="round"/>
-      <path d="M1050 470 q30 -90 60 0 q30 -90 60 0 q30 -90 60 0 q30 -90 60 0" stroke="#d9a441" stroke-width="10" fill="none" stroke-linecap="round" opacity=".7"/>
+<section class="hero" id="book">
+  <svg class="hero-art" viewBox="0 0 1440 620" preserveAspectRatio="xMidYMax slice">
+    <circle cx="1180" cy="150" r="80" fill="#d99a2b" opacity=".8"/>
+    <circle cx="1180" cy="150" r="120" fill="#d99a2b" opacity=".15"/>
+    <g opacity=".9">
+      <rect x="880" y="300" width="420" height="220" rx="8" fill="#0d141c"/>
+      <g fill="#d99a2b" opacity=".85">
+        <rect x="905" y="325" width="46" height="60" rx="4"/><rect x="965" y="325" width="46" height="60" rx="4"/>
+        <rect x="1025" y="325" width="46" height="60" rx="4"/><rect x="1085" y="325" width="46" height="60" rx="4"/>
+        <rect x="1145" y="325" width="46" height="60" rx="4"/><rect x="1205" y="325" width="46" height="60" rx="4"/>
+        <rect x="905" y="405" width="46" height="60" rx="4"/><rect x="965" y="405" width="46" height="60" rx="4"/>
+        <rect x="1025" y="405" width="46" height="60" rx="4"/><rect x="1085" y="405" width="46" height="60" rx="4"/>
+        <rect x="1145" y="405" width="46" height="60" rx="4"/><rect x="1205" y="405" width="46" height="60" rx="4"/>
+      </g>
+      <rect x="860" y="280" width="460" height="24" rx="6" fill="#0d141c"/>
     </g>
-    <g opacity=".2" stroke="#f0c778" stroke-width="3">
-      <path d="M0 520 Q 360 495 720 520 T 1440 520" fill="none"/>
-      <path d="M0 560 Q 360 538 720 560 T 1440 560" fill="none"/>
+    <g opacity=".35" stroke="#d99a2b" stroke-width="2">
+      <path d="M0 540 Q 360 510 720 540 T 1440 540" fill="none"/>
+      <path d="M0 575 Q 360 548 720 575 T 1440 575" fill="none"/>
     </g>
   </svg>
   <div class="wrap">
-    <span class="kicker">OVER 50 YEARS · ALTONA, MANITOBA</span>
-    <h1>The original farmers sausage, <span>done right.</span></h1>
-    <p class="lead">Hickory-smoked the slow way, made with minimal ingredients and 100% gluten free — the same recipe Altona families have loved for generations.</p>
+    <span class="kicker">OVER 40 ROOMS · INDOOR POOL &amp; HOT TUB</span>
+    <h1>Your home base in the <span>heart of Altona.</span></h1>
+    <p class="lead">Comfortable rooms, an indoor pool and hot tub, three on-site places to eat and drink, and staff who treat you like family — right on Centre Avenue.</p>
     <div class="hero-ctas">
-      <a class="btn" href="#products">See the Lineup</a>
-      <a class="btn ghost" href="#wholesale">Stock Pioneer</a>
+      <a class="btn" href="#rooms">See Rooms</a>
+      <a class="btn ghost" href="#dining">Eat &amp; Drink</a>
     </div>
-    <div class="hero-badges">
-      <div><strong>50+</strong>years of tradition</div>
-      <div><strong>100%</strong>gluten free</div>
-      <div><strong>Local</strong>bought &amp; made</div>
-    </div>
+    <form class="booking" onsubmit="return false;" aria-label="Check availability">
+      <div><label>CHECK-IN</label><input type="date" aria-label="Check-in date"></div>
+      <div><label>CHECK-OUT</label><input type="date" aria-label="Check-out date"></div>
+      <div><label>GUESTS</label><select aria-label="Guests"><option>1 adult</option><option selected>2 adults</option><option>2 adults, 1 child</option><option>2 adults, 2 children</option><option>Group / team</option></select></div>
+      <button class="btn" type="submit">Check Availability</button>
+    </form>
   </div>
 </section>
 
 <div class="stats">
   <div class="wrap">
-    <div><strong>50+</strong><span>YEARS OF TRADITION</span></div>
-    <div><strong>7</strong><span>SIGNATURE PRODUCTS</span></div>
-    <div><strong>0</strong><span>SHORTCUTS TAKEN</span></div>
-    <div><strong>1</strong><span>ORIGINAL RECIPE</span></div>
+    <div><strong>43</strong><span>GUEST ROOMS</span></div>
+    <div><strong>3</strong><span>PLACES TO EAT &amp; DRINK</span></div>
+    <div><strong>24 hr</strong><span>FRONT DESK</span></div>
+    <div><strong>Pet</strong><span>FRIENDLY ROOMS</span></div>
   </div>
 </div>
 
-<section class="block" id="products">
+<section class="block" id="rooms">
   <div class="wrap">
-    <div class="eyebrow">OUR PRODUCTS</div>
-    <h2 class="title">Farmers sausage done right.</h2>
-    <p class="sub">Every product starts with the finest pork and beef, top-quality hickory smoke, and a recipe we've guarded for over 50 years. The proof is in the tasting.</p>
+    <div class="eyebrow">ROOMS &amp; SUITES</div>
+    <h2 class="title">Rest easy. Every room, every budget.</h2>
+    <p class="sub">From quick overnight stops to family tournament weekends — clean, comfortable rooms with free Wi-Fi, air conditioning, and everything you need.</p>
     <div class="grid">
       <div class="card">
-        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><path d="M14 52 q16 -14 34 0 t34 0" stroke="#d9a441" stroke-width="11" stroke-linecap="round"/><path d="M14 70 q16 -14 34 0 t34 0" stroke="#d9a441" stroke-width="11" stroke-linecap="round" opacity=".65"/></svg></div>
-        <div class="card-body"><span class="tag">THE ORIGINAL</span><h3>Pure Pork Farmers Sausage</h3><p>Where the magic started — the true original. Fine pork, hickory smoke, and a coarse texture that won over Altona first.</p><a href="#buy">Where to buy →</a></div>
+        <div class="card-art"><svg viewBox="0 0 110 110" fill="none"><rect x="20" y="48" width="70" height="34" rx="8" fill="#d99a2b"/><rect x="14" y="40" width="12" height="42" rx="6" fill="#d99a2b"/><rect x="26" y="56" width="58" height="10" rx="5" fill="#121d28" opacity=".55"/><circle cx="28" cy="92" r="7" fill="#121d28"/><circle cx="82" cy="92" r="7" fill="#121d28"/></svg></div>
+        <div class="card-body"><span class="tag">MOST POPULAR</span><h3>Queen Room</h3><p>A comfortable queen bed, work desk, flat-screen TV, and private bath — perfect for business travel or a night passing through.</p><a href="#contact">Check availability →</a></div>
       </div>
       <div class="card">
-        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><path d="M14 52 q16 -14 34 0 t34 0" stroke="#f0c778" stroke-width="11" stroke-linecap="round"/><path d="M14 70 q16 -14 34 0 t34 0" stroke="#d9a441" stroke-width="11" stroke-linecap="round"/><circle cx="48" cy="30" r="9" fill="#d9a441"/></svg></div>
-        <div class="card-body"><span class="tag">EXTRA FLAVOUR</span><h3>Double Smoked Farmer Sausage</h3><p>For an extra kick of flavour — our hickory smoke turned all the way up. The most intense bite we make.</p><a href="#buy">Where to buy →</a></div>
+        <div class="card-art"><svg viewBox="0 0 110 110" fill="none"><rect x="12" y="52" width="42" height="28" rx="7" fill="#d99a2b"/><rect x="58" y="52" width="42" height="28" rx="7" fill="#d99a2b"/><rect x="12" y="44" width="10" height="36" rx="5" fill="#d99a2b"/><rect x="90" y="44" width="10" height="36" rx="5" fill="#d99a2b"/><circle cx="24" cy="90" r="6" fill="#121d28"/><circle cx="88" cy="90" r="6" fill="#121d28"/></svg></div>
+        <div class="card-body"><span class="tag">FAMILY FAVOURITE</span><h3>Double Queen Room</h3><p>Two queen beds and room to spread out — a favourite for hockey tournaments, family reunions, and wedding parties.</p><a href="#contact">Check availability →</a></div>
       </div>
       <div class="card">
-        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><ellipse cx="48" cy="54" rx="30" ry="22" fill="#d9a441"/><ellipse cx="48" cy="50" rx="22" ry="15" fill="#f0c778"/></svg></div>
-        <div class="card-body"><span class="tag">BBQ FAVOURITE</span><h3>Farmers Sausage Patties</h3><p>Our famous sausage in patty form — made for the barbecue, built for the burger.</p><a href="#buy">Where to buy →</a></div>
-      </div>
-      <div class="card">
-        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><ellipse cx="48" cy="54" rx="30" ry="22" fill="#d9a441"/><path d="M38 44 l8 12 M50 42 l6 14 M60 46 l4 10" stroke="#471313" stroke-width="5" stroke-linecap="round"/></svg></div>
-        <div class="card-body"><span class="tag">WITH A KICK</span><h3>Jalapeño Patties</h3><p>All the flavour of our farmers sausage with real jalapeño heat. Skip the hot sauce — this brings its own.</p><a href="#buy">Where to buy →</a></div>
-      </div>
-      <div class="card">
-        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><g stroke="#d9a441" stroke-width="10" stroke-linecap="round"><path d="M28 38 V66"/><path d="M48 38 V66"/><path d="M68 38 V66"/></g></svg></div>
-        <div class="card-body"><span class="tag">KID APPROVED</span><h3>Farmers Sausage Minis</h3><p>The taste of farmers sausage in hot-dog form — a super alternative to the same old hot dogs, great on the grill.</p><a href="#buy">Where to buy →</a></div>
-      </div>
-      <div class="card">
-        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><rect x="22" y="36" width="52" height="30" rx="15" fill="#d9a441"/><rect x="30" y="44" width="36" height="14" rx="7" fill="#f0c778"/></svg></div>
-        <div class="card-body"><span class="tag">OLD WORLD</span><h3>Liverwurst</h3><p>An old-world favourite — mouth-watering flavour with a texture so smooth it spreads.</p><a href="#buy">Where to buy →</a></div>
-      </div>
-      <div class="card">
-        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><circle cx="48" cy="52" r="26" fill="#d9a441"/><circle cx="48" cy="52" r="16" fill="none" stroke="#471313" stroke-width="6"/></svg></div>
-        <div class="card-body"><span class="tag">DELI CLASSIC</span><h3>Homemade Beef Ring</h3><p>Fully cooked 100% beef deli meat — warm it on the grill, top with your favourite cheese, and devour.</p><a href="#buy">Where to buy →</a></div>
+        <div class="card-art"><svg viewBox="0 0 110 110" fill="none"><rect x="24" y="40" width="62" height="42" rx="8" fill="#d99a2b"/><rect x="32" y="48" width="20" height="14" rx="3" fill="#121d28" opacity=".6"/><rect x="58" y="48" width="20" height="26" rx="3" fill="#121d28" opacity=".35"/><circle cx="34" cy="90" r="6" fill="#121d28"/><circle cx="76" cy="90" r="6" fill="#121d28"/></svg></div>
+        <div class="card-body"><span class="tag">EXTENDED STAY</span><h3>Kitchenette Suite</h3><p>Extra space with a kitchenette — cook your own meals and settle in for longer work assignments or relocations.</p><a href="#contact">Check availability →</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="block story" id="story">
+<section class="block amen" id="amenities">
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--gold-light)">OUR STORY</div>
-    <h2 class="title">Fifty years. One recipe. Zero shortcuts.</h2>
-    <p class="sub">Farmers sausage might seem like a strange thing to be passionate about — but it's our passion.</p>
-    <div class="story-grid">
-      <p class="story-lead">Pioneer Meat has been a tradition in Altona, Manitoba for <strong>over 50 years</strong>. We've painstakingly developed and guarded our recipe and process — and even as the business has grown, what hasn't changed are the <strong>recipes and the principles</strong> behind them. Everything we do is dedicated to one thing: the best possible experience for our customers.</p>
-      <div class="values">
-        <h3>WHAT WE STILL BELIEVE</h3>
-        <ul>
-          <li>We still use minimal ingredients</li>
-          <li>We still sell only the freshest products</li>
-          <li>We buy and produce everything locally</li>
-          <li>We are guided by simple, strong values</li>
-          <li>All our products are gluten free</li>
-        </ul>
-      </div>
+    <div class="eyebrow" style="color:var(--amber-light)">AMENITIES</div>
+    <h2 class="title">More than a place to sleep.</h2>
+    <p class="sub">Guests call it a mini-resort — everything you need for the whole weekend without leaving the block.</p>
+    <div class="amen-grid">
+      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><path d="M6 34 q5 -6 10 0 t10 0 t10 0 t10 0" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/><path d="M6 42 q5 -6 10 0 t10 0 t10 0 t10 0" stroke="#d99a2b" stroke-width="4" stroke-linecap="round" opacity=".6"/><rect x="18" y="8" width="16" height="14" rx="7" fill="#d99a2b"/></svg><h3>Indoor Pool &amp; Hot Tub</h3><p>Swim and soak year-round, whatever the Manitoba weather.</p></div>
+      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="20" r="8" fill="#d99a2b"/><path d="M14 44 q12 -14 24 0" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/></svg><h3>Pet-Friendly Rooms</h3><p>Bring the dogs — plenty of space for the whole family.</p></div>
+      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><rect x="8" y="14" width="36" height="24" rx="4" stroke="#d99a2b" stroke-width="4"/><path d="M20 44 h12 M26 38 v6" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/></svg><h3>Free Wi-Fi &amp; Parking</h3><p>Fast internet and free on-site parking for every guest.</p></div>
+      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6 v12 M14 14 l8 8 M38 14 l-8 8" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/><rect x="12" y="26" width="28" height="18" rx="4" fill="#d99a2b"/></svg><h3>Fitness &amp; Games Room</h3><p>Work out, shoot pool, or unwind in the leisure room.</p></div>
+      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><rect x="10" y="10" width="32" height="22" rx="4" stroke="#d99a2b" stroke-width="4"/><path d="M10 20 h32" stroke="#d99a2b" stroke-width="4"/><circle cx="18" cy="15" r="2" fill="#d99a2b"/></svg><h3>Meeting Facilities</h3><p>Space for banquets, meetings, and community events.</p></div>
+      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><path d="M10 40 h32 M14 40 V22 h24 v18" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/><path d="M26 22 v-8 M22 18 h8" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/></svg><h3>Guest House</h3><p>The Altona Guest House — extra space for groups.</p></div>
+      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="16" stroke="#d99a2b" stroke-width="4"/><path d="M26 18 v8 l6 4" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/></svg><h3>24-Hour Front Desk</h3><p>Late arrival? Someone's always here to welcome you.</p></div>
+      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><path d="M8 36 h36 l-4 -16 H12 Z" stroke="#d99a2b" stroke-width="4" stroke-linejoin="round"/><circle cx="18" cy="42" r="4" fill="#d99a2b"/><circle cx="34" cy="42" r="4" fill="#d99a2b"/></svg><h3>Easy Highway Access</h3><p>Minutes off the highway, in the heart of Altona.</p></div>
     </div>
   </div>
 </section>
 
-<section class="block" id="buy">
+<section class="block" id="dining">
   <div class="wrap">
-    <div class="buy">
-      <div>
-        <div class="eyebrow">WHERE TO BUY</div>
-        <h3>Find Pioneer on shelves near you.</h3>
-        <p>Our farmers sausage is stocked by local retailers across southern Manitoba — including Red River Co-op stores. Ask for it by name.</p>
-        <ul class="buy-list">
-          <li>Red River Co-op food stores</li>
-          <li>Local grocers &amp; butcher shops</li>
-          <li>Direct from our order desk</li>
-        </ul>
-        <a class="btn" href="#contact">Ask the Order Desk</a>
-      </div>
-      <div>
-        <div class="eyebrow">WHOLESALE &amp; RETAIL ENQUIRIES</div>
-        <h3>Carry the sausage people ask for.</h3>
-        <p>We're always looking for the right retail and foodservice partners. If your customers would love the original farmers sausage, let's talk.</p>
-        <a class="btn" href="#wholesale" style="background:var(--red-deep);color:#fff">Become a Stockist</a>
-      </div>
+    <div class="eyebrow">EAT &amp; DRINK</div>
+    <h2 class="title">Three reasons to never leave the building.</h2>
+    <p class="sub">Morning coffee, a legendary burger, and a cold one — all under one roof.</p>
+    <div class="dine-grid">
+      <div class="dine"><h3>Altona Coffee House</h3><p>Start the day right with great coffee and a warm, friendly atmosphere — a local favourite in its own right.</p></div>
+      <div class="dine"><h3>Grumpies Bar &amp; Grill</h3><p>Home of the famous ClubBurger and CheeseBurger Poutine. Good food, cold drinks, and the kind of service people write reviews about.</p></div>
+      <div class="dine"><h3>The Altona Beer Store</h3><p>Grab your favourites to take back to the room — retail beer store right on-site.</p></div>
     </div>
   </div>
 </section>
 
-<section class="block wholesale" id="wholesale">
+<section class="block direct">
   <div class="wrap">
-    <h2>Retailers, delis &amp; restaurants.</h2>
-    <p>Fifty years of customers asking for it by name. Join the stores and kitchens across Manitoba that stock the original farmers sausage.</p>
-    <a class="btn" href="#contact">Contact Our Order Desk</a>
+    <h2>Book direct. Skip the middleman.</h2>
+    <p>Third-party sites take a cut of every booking. When you book with us directly, you talk to real local staff — and every dollar stays in Altona.</p>
+    <div class="direct-points"><span>✓ Talk to real local staff</span><span>✓ Free Wi-Fi &amp; parking</span><span>✓ Support a local Altona business</span></div>
+    <a class="btn" href="#contact">Book Your Stay</a>
   </div>
 </section>
 
 <section class="block" id="contact">
   <div class="wrap">
     <div class="eyebrow">GET IN TOUCH</div>
-    <h2 class="title">Talk to the folks who make it.</h2>
-    <p class="sub">Orders, wholesale, or just to tell us how the sausage turned out — we'd love to hear from you.</p>
+    <h2 class="title">We're here around the clock.</h2>
+    <p class="sub">Questions, group bookings, or tournament weekends — call, email, or send a message.</p>
     <div class="contact-grid">
       <div class="contact-card">
-        <h3>Pioneer Meat</h3>
-        <p><strong>Location:</strong> Municipality of Rhineland, near Altona, MB</p>
-        <p><strong>Phone:</strong> (204) 324-5454</p>
-        <p><strong>Toll free:</strong> 1-800-743-4440</p>
-        <p><strong>Orders:</strong> orderdesk@pioneermeat.ca</p>
-        <p><strong>Hours:</strong> Mon–Fri, 8:00 AM – 4:00 PM CT</p>
+        <h3>Altona Hotel</h3>
+        <p><strong>Address:</strong> 61 Centre Avenue East, Altona, MB R0G 0B0</p>
+        <p><strong>Phone:</strong> (204) 324-5241</p>
+        <p><strong>Reservations:</strong> altonahotelreservations@gmail.com</p>
+        <p><strong>Check-in:</strong> 3:00 PM &nbsp;·&nbsp; <strong>Check-out:</strong> 11:00 AM</p>
+        <p><strong>Front desk:</strong> Open 24 hours</p>
       </div>
       <div class="contact-card">
-        <h3>Send us a message</h3>
+        <h3>Request a booking</h3>
         <form class="demo-form" onsubmit="return false;">
           <input type="text" placeholder="Your name" aria-label="Your name">
           <input type="email" placeholder="Email address" aria-label="Email address">
-          <select aria-label="Reason"><option>I'm a… customer</option><option>I'm a… retailer / stockist</option><option>I'm a… restaurant / foodservice</option><option>Just saying hi</option></select>
-          <textarea rows="4" placeholder="Your message" aria-label="Your message"></textarea>
-          <button class="btn" type="submit">Send Message</button>
+          <input type="text" placeholder="Dates &amp; number of guests" aria-label="Dates and guests">
+          <textarea rows="4" placeholder="Anything we should know? (pets, group booking, late arrival…)" aria-label="Your message"></textarea>
+          <button class="btn" type="submit">Send Request</button>
         </form>
       </div>
     </div>
@@ -297,10 +278,10 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Pioneer Meat · Altona, Manitoba, Canada</span>
+    <span>© 2026 Altona Hotel · 61 Centre Avenue East, Altona, Manitoba</span>
     <span>Design concept demo — created to show what's possible.</span>
   </div>
-  <div class="wrap"><p class="demo-tag">Concept demo only. Not affiliated with or endorsed by Pioneer Meat.</p></div>
+  <div class="wrap"><p class="demo-tag">Concept demo only. Not affiliated with or endorsed by the Altona Hotel.</p></div>
 </footer>
 
 </body>
