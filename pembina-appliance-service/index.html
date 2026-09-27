@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pembina Appliance Service | Appliance Repair — Gretna, Manitoba</title>
+<style>
+  :root{
+    --blue:#2f5f8a; --blue-deep:#1d3a55; --blue-700:#275473;
+    --accent:#f2a33c; --accent-light:#f8cf8a; --slate:#f4f6f8; --char:#232d36; --muted:#66757f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--char);background:var(--slate);line-height:1.6}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+  .topbar{background:var(--blue-deep);color:#dbe7f0;font-size:.82rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:7px;padding-bottom:7px;flex-wrap:wrap;gap:4px}
+  .topbar a:hover{color:var(--accent-light)}
+  .concept-tag{background:var(--accent);color:#3a2405;font-weight:800;font-size:.68rem;letter-spacing:1px;padding:3px 10px;border-radius:999px}
+
+  header.nav{background:rgba(29,58,85,.97);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(0,0,0,.3)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .brand-mark{width:42px;height:42px;flex:0 0 42px}
+  .brand-name{font-weight:800;font-size:1.25rem;letter-spacing:.5px;line-height:1.1}
+  .brand-name small{display:block;font-weight:600;font-size:.62rem;letter-spacing:2.5px;color:var(--accent-light)}
+  nav.links{display:flex;gap:26px;color:#dbe7f0;font-weight:600;font-size:.95rem}
+  nav.links a:hover{color:var(--accent-light)}
+  .btn{display:inline-block;background:var(--blue);color:#fff;font-weight:800;padding:12px 28px;border-radius:8px;letter-spacing:.3px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(47,95,138,.45)}
+  .btn.gold{background:var(--accent);color:#3a2405}
+  .btn.gold:hover{box-shadow:0 8px 20px rgba(242,163,60,.45)}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
+  .btn.ghost:hover{border-color:var(--accent-light);color:var(--accent-light);box-shadow:none}
+  .nav-cta{font-size:.9rem;padding:10px 20px}
+  @media(max-width:900px){nav.links{display:none}}
+
+  .hero{position:relative;background:linear-gradient(180deg,#1d3a55 0%,#2f5f8a 60%,#275473 100%);color:#fff;overflow:hidden}
+  .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+  .hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,58,85,.84) 0%,rgba(29,58,85,.62) 60%,rgba(29,58,85,.80) 100%);pointer-events:none}
+  .hero .wrap{position:relative;padding:88px 22px 96px}
+  .kicker{display:inline-block;background:rgba(242,163,60,.16);border:1px solid var(--accent);color:var(--accent-light);font-weight:700;font-size:.8rem;letter-spacing:2px;padding:7px 16px;border-radius:999px;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4rem);line-height:1.05;font-weight:900;letter-spacing:-.5px;max-width:660px}
+  .hero h1 span{color:var(--accent-light)}
+  .hero p.lead{margin:20px 0 34px;max-width:580px;font-size:1.12rem;color:#dbe7f0}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap;color:#dbe7f0;font-size:.9rem}
+  .hero-badges strong{display:block;font-size:1.5rem;color:#fff}
+
+  .band{background:#fff;border-top:1px solid #dde4e9;border-bottom:1px solid #dde4e9}
+  .band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:26px;padding-bottom:26px}
+  .band .stat{text-align:center}
+  .band .stat strong{display:block;font-size:1.2rem;color:var(--blue-deep)}
+  .band .stat span{font-size:.86rem;color:var(--muted)}
+  @media(max-width:760px){.band .wrap{grid-template-columns:repeat(2,1fr)}}
+
+  section.block{padding:74px 0}
+  .sec-head{text-align:center;max-width:700px;margin:0 auto 46px}
+  .sec-head .eyebrow{color:var(--blue);font-weight:800;letter-spacing:2.5px;font-size:.78rem;text-transform:uppercase}
+  .sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);color:var(--blue-deep);margin:10px 0 12px;letter-spacing:-.4px}
+  .sec-head p{color:var(--muted)}
+
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  @media(max-width:820px){.story{grid-template-columns:1fr}}
+  .story h3{color:var(--blue-deep);font-size:1.4rem;margin-bottom:12px}
+  .story p{color:#3d4a54;margin-bottom:14px}
+  .story-art{background:#fff;border:1px solid #dde4e9;border-radius:16px;padding:28px;text-align:center;box-shadow:0 10px 30px rgba(29,58,85,.08)}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.svc-grid{grid-template-columns:1fr}}
+  .svc-card{background:#fff;border:1px solid #dde4e9;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(29,58,85,.06)}
+  .svc-card img{width:100%;height:210px;object-fit:cover;display:block}
+  .svc-card .body{padding:18px 20px}
+  .svc-card h3{color:var(--blue-deep);font-size:1.05rem;margin-bottom:6px}
+  .svc-card p{font-size:.88rem;color:var(--muted)}
+  .svc-note{text-align:center;color:var(--muted);font-size:.9rem;margin-top:26px;max-width:660px;margin-left:auto;margin-right:auto}
+
+  .reviews{background:var(--blue-deep);color:#dbe7f0}
+  .reviews .sec-head h2{color:#fff}
+  .reviews .sec-head .eyebrow{color:var(--accent-light)}
+  .reviews .sec-head p{color:#b9c9d6}
+  .rating-card{max-width:560px;margin:0 auto;background:rgba(255,255,255,.06);border:1px solid rgba(242,163,60,.35);border-radius:16px;padding:44px 30px;text-align:center}
+  .rating-num{font-size:4rem;font-weight:900;color:#fff;line-height:1}
+  .rating-card p{color:#b9c9d6;font-size:1rem}
+  .rating-card p strong{color:#fff}
+
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media(max-width:760px){.visit{grid-template-columns:1fr}}
+  .visit-card{background:#fff;border:1px solid #dde4e9;border-radius:14px;padding:32px;box-shadow:0 6px 22px rgba(29,58,85,.06)}
+  .visit-card h3{color:var(--blue-deep);font-size:1.25rem;margin-bottom:16px}
+  table.hours{width:100%;border-collapse:collapse;font-size:.95rem}
+  table.hours td{padding:8px 0;border-bottom:1px dashed #dde4e9}
+  table.hours td:last-child{text-align:right;font-weight:700;color:var(--blue-deep);white-space:nowrap}
+  .closed{color:#a0522d!important}
+  .big-phone{font-size:1.5rem;font-weight:800;color:var(--blue-700)}
+  .fine-note{font-size:.85rem;color:var(--muted);margin-top:12px}
+
+  footer{background:var(--blue-deep);color:#b9c9d6;padding:44px 0 30px;font-size:.92rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap}
+  footer a{color:var(--accent-light)}
+  footer .fine{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:.8rem;color:#8fa1ad;text-align:center;width:100%}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>📍 488 Mill Road, Gretna, MB &nbsp;·&nbsp; <a href="tel:+12043244253">(204) 324-4253</a></span>
+    <span class="concept-tag">UNOFFICIAL CONCEPT</span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="#f2a33c"/>
+        <path d="M31 11 a9 9 0 1 0 6 15.5 L31.6 21 a4.4 4.4 0 1 1 -2.6 -2.6 z" fill="#1d3a55" transform="rotate(35 24 24)"/>
+        <circle cx="24" cy="24" r="4.2" fill="#f2a33c"/>
+        <path d="M10 34 h28" stroke="#1d3a55" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M16 39 h16" stroke="#1d3a55" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">Pembina Appliance<small>APPLIANCE REPAIR SERVICE · GRETNA</small></span>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Hours &amp; Visit</a>
+    </nav>
+    <a class="btn nav-cta" href="tel:+12043244253">Call to Book</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <img class="hero-art" src="images/hero.jpg" alt="Technician servicing a washing machine">
+  <div class="hero-shade"></div>
+  <div class="wrap">
+    <span class="kicker">488 MILL ROAD · GRETNA, MANITOBA · APPLIANCE REPAIR</span>
+    <h1>When your appliances quit, <span>call someone local.</span></h1>
+    <p class="lead">Pembina Appliance Service is Gretna's own appliance repair shop — listed for the Pembina Valley with weekday hours and a straightforward phone number to reach a real person.</p>
+    <div class="hero-ctas">
+      <a class="btn gold" href="#services">What They Fix</a>
+      <a class="btn ghost" href="tel:+12043244253">📞 (204) 324-4253</a>
+    </div>
+    <div class="hero-badges">
+      <div><strong>Mon–Fri</strong>9 AM – 5 PM</div>
+      <div><strong>Gretna, MB</strong>488 Mill Road</div>
+      <div><strong>Call to Book</strong>(204) 324-4253</div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="stat"><strong>Appliance Repair</strong><span>listed service category</span></div>
+    <div class="stat"><strong>Weekdays 9–5</strong><span>closed weekends</span></div>
+    <div class="stat"><strong>Gretna &amp; Area</strong><span>Pembina Valley, MB</span></div>
+    <div class="stat"><strong>Call First</strong><span>no online booking — phone only</span></div>
+  </div>
+</div>
+
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">About</div>
+      <h2>Gretna's appliance repair shop</h2>
+      <p>A local repair service on Mill Road — no website, no social media, just a phone number. This page shows what one could look like.</p>
+    </div>
+    <div class="story">
+      <div>
+        <h3>Local, reachable, straightforward</h3>
+        <p>Pembina Appliance Service is listed as an <strong>Appliance Repair Service</strong> at 488 Mill Road in Gretna, Manitoba, with weekday hours Monday to Friday, 9 AM to 5 PM. It's also carried on the Better Business Bureau directory under "Small Appliance Services."</p>
+        <p>Right now the shop has <strong>no website at all</strong> — no way to see hours, services, or directions online, and no email or Facebook page to reach out through. Customers find it only through directory listings.</p>
+        <p><strong>Good to know:</strong> the shop is closed on weekends, so weekday calls are the way to reach them. Bring your appliance's make and model number when you call — it helps any repair shop diagnose faster.</p>
+      </div>
+      <div class="story-art">
+        <img src="images/technician-kitchen.jpg" alt="Technician diagnosing a washing machine" style="width:100%;border-radius:12px;display:block">
+        <p style="margin-top:10px;font-size:.85rem;color:var(--muted)">A technician at work — representative illustration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="services" style="background:#fff;border-top:1px solid #dde4e9;border-bottom:1px solid #dde4e9">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Services</div>
+      <h2>Typical appliance repair work</h2>
+      <p>The shop has no published service list online — it's listed simply as an "Appliance Repair Service." These are the kinds of jobs that covers; confirm yours by phone.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <img src="images/fridge-repair.jpg" alt="Technician servicing a refrigerator">
+        <div class="body"><h3>Fridges &amp; Freezers</h3><p>Not cooling, icing up, running non-stop — the most common appliance repair calls.</p></div>
+      </div>
+      <div class="svc-card">
+        <img src="images/washer-repair.jpg" alt="Technician repairing a washing machine">
+        <div class="body"><h3>Washers &amp; Dryers</h3><p>Won't spin, won't drain, won't heat — laundry breakdowns fixed right.</p></div>
+      </div>
+      <div class="svc-card">
+        <img src="images/service-tools.png" alt="Appliance service tools and parts">
+        <div class="body"><h3>Stoves, Ovens &amp; More</h3><p>Have a burner, oven, or dishwasher acting up? Ask when you call.</p></div>
+      </div>
+    </div>
+    <p class="svc-note">Pembina Appliance Service publishes no service list, price list, or brand list online — everything above reflects the shop's directory category ("Appliance Repair Service"), not a confirmed menu of services. Call <a href="tel:+12043244253" style="font-weight:700;color:var(--blue-700)">(204) 324-4253</a> to ask about your specific appliance.</p>
+  </div>
+</section>
+
+<section class="block reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Word of Mouth</div>
+      <h2>No public reviews — yet</h2>
+      <p>We checked Google, business directories, and social media: not a single public review exists for this shop.</p>
+    </div>
+    <div class="rating-card">
+      <div class="rating-num">—</div>
+      <p><strong>No public reviews found.</strong> Zero reviews on Google, the BBB listing, and every directory we checked. For a repair business, that's a real gap — happy customers have nowhere to vouch, and new customers have nothing to go on. A real website with a review page would fix that.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="visit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Hours &amp; Visit</div>
+      <h2>Call on a weekday — they're open 9 to 5</h2>
+      <p>Closed on weekends. Phone is the only way to reach them — no email, no online booking.</p>
+    </div>
+    <div class="visit">
+      <div class="visit-card">
+        <h3>Hours</h3>
+        <table class="hours">
+          <tr><td>Monday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Thursday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Saturday</td><td class="closed">Closed</td></tr>
+          <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+        </table>
+        <p class="fine-note">Hours follow the public Google Maps and directory listings and can change — call ahead to confirm.</p>
+      </div>
+      <div class="visit-card">
+        <h3>Find us</h3>
+        <p><strong>488 Mill Road</strong><br>Gretna, MB R0G 0V0</p>
+        <p style="margin-top:10px">Appliance repair service<br>Weekdays only · phone bookings</p>
+        <p style="margin-top:14px"><a class="big-phone" href="tel:+12043244253">(204) 324-4253</a></p>
+        <p class="fine-note">No email address is listed anywhere online — call is the only contact method.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong style="color:#fff">Pembina Appliance Service</strong><br>
+      488 Mill Road, Gretna, MB R0G 0V0<br>
+      <a href="tel:+12043244253">(204) 324-4253</a>
+    </div>
+    <div>
+      Mon–Fri 9 AM – 5 PM<br>
+      Sat–Sun closed
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="fine">Unofficial concept demo — created to show what's possible. Not affiliated with or endorsed by Pembina Appliance Service. Hours, address, and phone number are from public directory listings; services described reflect the shop's listed business category, not a confirmed service menu. Photos are representative illustrations, not this business's own photos. Please confirm hours and services by phone at (204) 324-4253.</div>
+  </div>
+</footer>
+
+</body>
+</html>
