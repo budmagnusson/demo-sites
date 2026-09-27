@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andreas Maier — Painter, Renovations &amp; Repairs | Morden, Manitoba</title>
+<meta name="description" content="Andreas Maier — interior & exterior painting, drywall repair, and finishing in Morden, Manitoba. Call (204) 325-0355 for a quote.">
+<style>
+:root{
+  --navy:#1f3a52; --navy-deep:#152a3d; --cream:#faf6ee; --accent:#d98e2b;
+  --accent-deep:#b96f18; --char:#2b2b2b; --muted:#6f6a60; --line:#e7dcc6; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--char);background:var(--cream);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+/* banner */
+.concept-banner{background:var(--navy-deep);color:#fff;text-align:center;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 14px}
+/* header */
+.site-head{background:var(--navy);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.head-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
+.brand{font-weight:800;font-size:1.35rem;letter-spacing:.01em}
+.brand span{color:var(--accent)}
+.head-phone{background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:999px;font-size:1rem;white-space:nowrap}
+.head-phone:hover{background:var(--accent-deep)}
+/* hero */
+.hero{position:relative;color:#fff;padding:110px 0 100px;overflow:hidden;
+  background:linear-gradient(135deg,#2c4a66 0%,#1f3a52 45%,#152a3d 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.14;
+  background-image:repeating-linear-gradient(0deg,transparent,transparent 46px,rgba(255,255,255,.6) 46px,rgba(255,255,255,.6) 48px),
+                   repeating-linear-gradient(90deg,transparent,transparent 90px,rgba(255,255,255,.6) 90px,rgba(255,255,255,.6) 92px)}
+.hero-inner{position:relative}
+.eyebrow{display:inline-block;background:rgba(217,142,43,.22);border:1px solid var(--accent);color:#ffd9a3;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:20px}
+.hero h1{font-size:clamp(2rem,5.2vw,3.6rem);line-height:1.12;margin-bottom:16px;max-width:16em}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero p.lead{font-size:1.12rem;color:#e9e2d3;max-width:34em;margin-bottom:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:999px;font-size:1.02rem}
+.btn-call{background:var(--accent);color:#fff}
+.btn-call:hover{background:var(--accent-deep)}
+.btn-ghost{border:2px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.trust-row{display:flex;gap:26px;flex-wrap:wrap;margin-top:38px;color:#d8cfb9;font-size:.95rem}
+.trust-row strong{color:#fff}
+/* services */
+.section{padding:78px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 46px}
+.sec-head h2{font-size:clamp(1.6rem,3.4vw,2.4rem);color:var(--navy-deep);margin-bottom:12px}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.cards{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 24px;text-align:center;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,58,82,.12)}
+.card .icon{font-size:2.4rem;display:block;margin-bottom:14px}
+.card h3{color:var(--navy-deep);font-size:1.1rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.95rem}
+/* why */
+.why{background:var(--navy-deep);color:#fff}
+.why .sec-head h2{color:#fff}
+.why .sec-head p{color:#cfc8b8}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr}}
+.why-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:28px 24px}
+.why-item h3{color:var(--accent);font-size:1.05rem;margin-bottom:10px}
+.why-item p{color:#e5ddcc;font-size:.95rem}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 26px;position:relative}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-20px;left:24px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(217,142,43,.4)}
+.step h3{color:var(--navy-deep);margin:8px 0 10px;font-size:1.08rem}
+.step p{color:var(--muted);font-size:.95rem}
+/* before-after note */
+.transform{background:linear-gradient(135deg,#f3e7cf 0%,#efe0c3 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.transform-box{display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+.transform-box>div:first-child{flex:1 1 320px}
+.transform-box h2{color:var(--navy-deep);font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:12px}
+.transform-box p{color:var(--muted);margin-bottom:10px}
+.transform-note{background:var(--white);border:1px dashed #c9b98f;border-radius:14px;padding:26px;flex:1 1 280px;color:var(--muted);font-size:.95rem}
+.transform-note strong{color:var(--navy-deep)}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:760px){.visit{grid-template-columns:1fr}}
+.visit-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:34px 30px}
+.visit-card h3{color:var(--navy-deep);font-size:1.2rem;margin-bottom:16px}
+.visit-card p{font-size:.95rem;color:var(--muted);margin:8px 0}
+.visit-card p strong{color:var(--char)}
+.map-wrap{border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:14px 0 6px}
+.map-wrap iframe{width:100%;height:230px;border:0;display:block}
+.big-phone{display:inline-block;font-size:1.5rem;font-weight:800;color:var(--accent-deep);text-decoration:none;margin-top:10px}
+.big-phone:hover{text-decoration:underline}
+/* footer */
+footer{background:var(--navy-deep);color:#cfc8b8;padding:40px 0 26px}
+.foot-grid{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:20px}
+.foot-grid a{color:#fff;text-decoration:none}
+.fine{font-size:.78rem;color:#9b947f;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+</style>
+</head>
+<body>
+
+<div class="concept-banner">Unofficial concept demo — not affiliated with Andreas Maier</div>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <div class="brand">Andreas Maier <span>·</span> Painting</div>
+    <a class="head-phone" href="tel:+12043250355">Call (204) 325-0355</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Morden, Manitoba</span>
+    <h1>Fresh paint. Clean lines. <em>Done right.</em></h1>
+    <p class="lead">Andreas Maier handles interior and exterior painting, drywall repair, and finishing in Morden and the surrounding area. One call gets you a quote and a date on the calendar.</p>
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:+12043250355">Call for a Free Quote</a>
+      <a class="btn btn-ghost" href="#services">See Services</a>
+    </div>
+    <div class="trust-row">
+      <div><strong>Local</strong> · Morden-based</div>
+      <div><strong>Interior + Exterior</strong> painting</div>
+      <div><strong>Drywall</strong> repair &amp; finishing</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="background:#f0e3cb;border-color:var(--accent);color:var(--accent-deep)">What he does</div>
+      <h2>One call covers the whole job</h2>
+      <p>From patching the wall to the final coat — the prep work and the paint, handled by one person who stands behind it.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="icon">🖌️</span>
+        <h3>Interior Painting</h3>
+        <p>Rooms, ceilings, trim, and doors. Clean edges, even coats, and your furniture protected while we work.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🏠</span>
+        <h3>Exterior Painting</h3>
+        <p>Siding, trim, and porches — prepped and painted to stand up to Manitoba weather.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🧱</span>
+        <h3>Drywall Repair</h3>
+        <p>Dents, cracks, holes, and water-damage patches repaired so they disappear under the paint.</p>
+      </div>
+      <div class="card">
+        <span class="icon">✨</span>
+        <h3>Finishing</h3>
+        <p>Taping, mudding, sanding, and the detail work that makes walls look brand new.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why call Andreas</div>
+      <h2>A painter, not a call center</h2>
+      <p>When you call, you talk to the person doing the work — not a dispatcher three towns over.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>📍 Local to Morden</h3>
+        <p>Based right here in Morden. Short drive, quick response, and he knows the houses in this area.</p>
+      </div>
+      <div class="why-item">
+        <h3>🔧 Prep included</h3>
+        <p>Drywall repairs, patching, and finishing are part of the service — walls are made right before the paint goes on.</p>
+      </div>
+      <div class="why-item">
+        <h3>📞 Talk to the painter</h3>
+        <p>No middlemen. You describe the job to the person who'll hold the brush, and he gives you a straight answer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="background:#f0e3cb;border-color:var(--accent);color:var(--accent-deep)">How it works</div>
+      <h2>Getting your rooms painted is simple</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Call or message</h3>
+        <p>Describe the rooms or the exterior work you need done. (204) 325-0355 — you'll talk to Andreas directly.</p>
+      </div>
+      <div class="step">
+        <h3>Get a quote</h3>
+        <p>He'll take a look and give you a clear price for the job — painting, drywall repair, and finishing included.</p>
+      </div>
+      <div class="step">
+        <h3>Enjoy fresh walls</h3>
+        <p>Prep, patch, paint, and clean-up. You come home to rooms that look brand new.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section transform">
+  <div class="wrap transform-box">
+    <div>
+      <h2>Before-and-after photos sell paint jobs</h2>
+      <p>A proper gallery of finished rooms, exteriors, and repair work is what turns a Google searcher into a caller.</p>
+      <p><strong>This demo ships with a photo-gallery section ready to go</strong> — the moment Andreas sends over pictures of finished work, they drop straight in.</p>
+    </div>
+    <div class="transform-note">
+      <strong>📸 Photo gallery goes here.</strong><br><br>
+      Finished living rooms, exteriors, and drywall repairs — before-and-after pairs work best. Photos of real local work build the most trust.
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="background:#f0e3cb;border-color:var(--accent);color:var(--accent-deep)">Get in touch</div>
+      <h2>Ready when you are</h2>
+      <p>Call for a free quote — no website forms, no waiting on hold.</p>
+    </div>
+    <div class="visit">
+      <div class="visit-card">
+        <h3>Find us</h3>
+        <p><strong>440 5 Street</strong><br>Morden, MB R6M 1N8</p>
+        <div class="map-wrap"><iframe title="Map — Andreas Maier, Morden" src="https://www.google.com/maps?q=440%205%20Street%2C%20Morden%2C%20MB%20R6M%201N8&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <p>Serving Morden &amp; surrounding communities</p>
+      </div>
+      <div class="visit-card">
+        <h3>Call today</h3>
+        <p>Interior &amp; exterior painting<br>Drywall repair &amp; finishing<br>Renovations &amp; repairs</p>
+        <a class="big-phone" href="tel:+12043250355">(204) 325-0355</a>
+        <p style="margin-top:12px">Talk directly to Andreas — the person doing the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <strong style="color:#fff">Andreas Maier</strong><br>
+      Painting, Renovations &amp; Repairs<br>
+      440 5 Street, Morden, MB R6M 1N8<br>
+      <a href="tel:+12043250355">(204) 325-0355</a>
+    </div>
+    <div>
+      Interior Painting<br>
+      Exterior Painting<br>
+      Drywall Repair &amp; Finishing
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="fine">Unofficial concept demo — created to show what's possible. Not affiliated with or endorsed by Andreas Maier.</div>
+  </div>
+</footer>
+
+</body>
+</html>
