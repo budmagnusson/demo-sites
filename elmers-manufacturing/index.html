@@ -3,273 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Altona Hotel | Stay in the Heart of Altona, Manitoba</title>
+<title>Elmer's Manufacturing | Farm Equipment Built in Altona, MB</title>
 <style>
   :root{
-    --navy:#1c2b3a; --navy-deep:#121d28; --amber:#d99a2b; --amber-light:#f2c14e;
-    --cream:#faf7ef; --char:#232323; --muted:#66707a;
+    --green-900:#0e2a16; --green-800:#14351f; --green-700:#1d4a2a;
+    --gold:#f0a92e; --gold-light:#ffc95e; --cream:#faf6ec; --char:#191914;
+    --muted:#5c6659;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--char);background:var(--cream);line-height:1.6}
   a{text-decoration:none;color:inherit}
   .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
 
-  .topbar{background:var(--navy-deep);color:#cfd8e0;font-size:.82rem}
+  /* top bar */
+  .topbar{background:var(--green-900);color:#dfe8dc;font-size:.82rem}
   .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:7px;padding-bottom:7px;flex-wrap:wrap;gap:4px}
-  .topbar a:hover{color:var(--amber-light)}
+  .topbar a:hover{color:var(--gold-light)}
 
-  header.nav{background:rgba(18,29,40,.97);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+  /* nav */
+  header.nav{background:rgba(14,42,22,.97);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(0,0,0,.25)}
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
   .brand{display:flex;align-items:center;gap:12px;color:#fff}
   .brand-mark{width:42px;height:42px;flex:0 0 42px}
-  .brand-name{font-weight:800;font-size:1.3rem;letter-spacing:.5px;line-height:1.1}
-  .brand-name small{display:block;font-weight:600;font-size:.66rem;letter-spacing:4px;color:var(--amber-light)}
-  nav.links{display:flex;gap:26px;color:#eef2f5;font-weight:600;font-size:.95rem}
-  nav.links a:hover{color:var(--amber-light)}
-  .btn{display:inline-block;background:var(--amber);color:#241a05;font-weight:800;padding:12px 28px;border-radius:8px;letter-spacing:.3px;transition:transform .15s,box-shadow .15s}
-  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,154,43,.45)}
+  .brand-name{font-weight:800;font-size:1.35rem;letter-spacing:.5px;line-height:1.1}
+  .brand-name small{display:block;font-weight:600;font-size:.68rem;letter-spacing:3px;color:var(--gold-light)}
+  nav.links{display:flex;gap:26px;color:#eef3ea;font-weight:600;font-size:.95rem}
+  nav.links a:hover{color:var(--gold-light)}
+  .btn{display:inline-block;background:var(--gold);color:#231a05;font-weight:800;padding:12px 26px;border-radius:8px;letter-spacing:.3px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(240,169,46,.4)}
   .btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
-  .btn.ghost:hover{border-color:var(--amber-light);color:var(--amber-light);box-shadow:none}
+  .btn.ghost:hover{border-color:var(--gold-light);color:var(--gold-light);box-shadow:none}
   .nav-cta{font-size:.9rem;padding:10px 20px}
   @media(max-width:820px){nav.links{display:none}}
 
-  .hero{position:relative;background:linear-gradient(180deg,#121d28 0%,#1c2b3a 60%,#2a3f55 100%);color:#fff;overflow:hidden}
-  .hero-art{position:absolute;inset:0;pointer-events:none}
-  .hero .wrap{position:relative;padding:92px 22px 60px}
-  .kicker{display:inline-block;background:rgba(217,154,43,.16);border:1px solid var(--amber);color:var(--amber-light);font-weight:700;font-size:.8rem;letter-spacing:2px;padding:7px 16px;border-radius:999px;margin-bottom:22px}
-  .hero h1{font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.05;font-weight:900;letter-spacing:-.5px;max-width:640px}
-  .hero h1 span{color:var(--amber-light)}
-  .hero p.lead{margin:20px 0 34px;max-width:560px;font-size:1.12rem;color:#dbe3ea}
+  /* hero */
+  .hero{position:relative;background:linear-gradient(180deg,#0e2a16 0%,#1d4a2a 55%,#2c5c33 100%);color:#fff;overflow:hidden}
+  .hero-art{position:absolute;inset:0;opacity:.9;pointer-events:none}
+  .hero .wrap{position:relative;padding:96px 22px 110px;max-width:1140px}
+  .kicker{display:inline-block;background:rgba(240,169,46,.16);border:1px solid var(--gold);color:var(--gold-light);font-weight:700;font-size:.8rem;letter-spacing:2px;padding:7px 16px;border-radius:999px;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;font-weight:900;letter-spacing:-.5px;max-width:640px}
+  .hero h1 span{color:var(--gold-light)}
+  .hero p.lead{margin:20px 0 34px;max-width:560px;font-size:1.12rem;color:#e6eee2}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap;color:#dfe8dc;font-size:.9rem}
+  .hero-badges strong{display:block;font-size:1.5rem;color:#fff}
 
-  .booking{background:#fff;border-radius:16px;box-shadow:0 18px 44px rgba(0,0,0,.28);padding:24px;margin-top:44px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;align-items:end;position:relative}
-  @media(max-width:820px){.booking{grid-template-columns:1fr 1fr}}
-  @media(max-width:520px){.booking{grid-template-columns:1fr}}
-  .booking label{display:block;font-size:.75rem;font-weight:800;letter-spacing:1.5px;color:var(--muted);margin-bottom:6px}
-  .booking input,.booking select{width:100%;padding:13px 14px;border:1.5px solid #dfe3e6;border-radius:8px;font-size:1rem;font-family:inherit;background:var(--cream);color:var(--char)}
-  .booking input:focus,.booking select:focus{outline:none;border-color:var(--amber)}
-  .booking .btn{border:none;cursor:pointer;font-size:1rem;padding:13px 30px;white-space:nowrap}
-
-  .stats{background:var(--amber);color:#241a05}
+  /* stats */
+  .stats{background:var(--gold);color:#231a05}
   .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding-top:26px;padding-bottom:26px;gap:12px}
   .stats strong{font-size:1.9rem;display:block;line-height:1.1}
   .stats span{font-size:.85rem;font-weight:600;letter-spacing:.5px}
   @media(max-width:700px){.stats .wrap{grid-template-columns:repeat(2,1fr);row-gap:20px}}
 
+  /* sections */
   section.block{padding:84px 0}
-  .eyebrow{color:#8a6a1f;font-weight:800;letter-spacing:3px;font-size:.78rem;margin-bottom:12px}
-  h2.title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;letter-spacing:-.5px;margin-bottom:14px;color:var(--navy-deep)}
+  .eyebrow{color:var(--green-700);font-weight:800;letter-spacing:3px;font-size:.78rem;margin-bottom:12px}
+  h2.title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;letter-spacing:-.5px;margin-bottom:14px;color:var(--green-900)}
   p.sub{color:var(--muted);max-width:640px;margin-bottom:44px;font-size:1.05rem}
 
+  /* products */
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:600px){.grid{grid-template-columns:1fr}}
-  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(28,43,58,.08);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
-  .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(28,43,58,.16)}
-  .card-art{height:170px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--navy),#2e4358)}
-  .card-art svg{width:110px;height:110px}
+  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(20,53,31,.08);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(20,53,31,.16)}
+  .card-art{height:170px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--green-800),var(--green-700))}
+  .card-art svg{width:120px;height:120px}
   .card-body{padding:26px}
-  .card-body h3{font-size:1.2rem;margin-bottom:8px;color:var(--navy-deep)}
+  .card-body h3{font-size:1.2rem;margin-bottom:8px;color:var(--green-900)}
   .card-body p{font-size:.94rem;color:var(--muted);margin-bottom:16px}
-  .card-body a{color:#8a6a1f;font-weight:800;font-size:.92rem}
-  .card-body a:hover{color:var(--navy-deep)}
-  .tag{display:inline-block;background:#f3e7cd;color:#7a5c14;font-size:.75rem;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+  .card-body a{color:var(--green-700);font-weight:800;font-size:.92rem}
+  .card-body a:hover{color:#0e2a16}
 
-  .amen{background:var(--navy-deep);color:#e8edf1}
-  .amen h2.title{color:#fff}
-  .amen p.sub{color:#a9b6c2}
-  .amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  @media(max-width:900px){.amen-grid{grid-template-columns:repeat(2,1fr)}}
-  .amen-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:26px;text-align:center}
-  .amen-item svg{width:52px;height:52px;margin-bottom:12px}
-  .amen-item h3{font-size:1rem;margin-bottom:6px}
-  .amen-item p{font-size:.86rem;color:#a9b6c2}
+  /* why */
+  .why{background:var(--green-900);color:#eef3ea}
+  .why h2.title{color:#fff}
+  .why p.sub{color:#c4d2bf}
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:8px}
+  @media(max-width:700px){.why-grid{grid-template-columns:1fr}}
+  .why-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px}
+  .why-item .n{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--gold);color:#231a05;font-weight:900;margin-bottom:14px}
+  .why-item h3{margin-bottom:8px;font-size:1.1rem}
+  .why-item p{color:#c4d2bf;font-size:.95rem}
 
-  .dine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  @media(max-width:800px){.dine-grid{grid-template-columns:1fr}}
-  .dine{background:#fff;border-radius:16px;padding:32px;box-shadow:0 6px 24px rgba(28,43,58,.08);border-top:5px solid var(--amber)}
-  .dine h3{color:var(--navy-deep);margin-bottom:8px;font-size:1.25rem}
-  .dine p{color:var(--muted);font-size:.95rem}
+  /* dealer cta */
+  .dealer{background:linear-gradient(120deg,var(--gold) 0%,var(--gold-light) 100%);color:#231a05;text-align:center}
+  .dealer h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:12px}
+  .dealer p{max-width:560px;margin:0 auto 28px;font-weight:600}
+  .dealer .btn{background:var(--green-900);color:#fff}
+  .dealer .btn:hover{box-shadow:0 8px 20px rgba(14,42,22,.4)}
 
-  .direct{background:linear-gradient(120deg,var(--amber) 0%,var(--amber-light) 100%);color:#241a05;text-align:center}
-  .direct h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:12px}
-  .direct p{max-width:600px;margin:0 auto 28px;font-weight:600}
-  .direct-points{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin-bottom:30px;font-weight:700}
-  .direct .btn{background:var(--navy-deep);color:#fff}
-  .direct .btn:hover{box-shadow:0 8px 20px rgba(18,29,40,.4)}
-
+  /* contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
   @media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
-  .contact-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 6px 24px rgba(28,43,58,.08)}
-  .contact-card h3{color:var(--navy-deep);margin-bottom:14px}
+  .contact-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 6px 24px rgba(20,53,31,.08)}
+  .contact-card h3{color:var(--green-900);margin-bottom:14px}
   .contact-card p{margin-bottom:8px;color:var(--muted)}
   .contact-card strong{color:var(--char)}
   form.demo-form{display:flex;flex-direction:column;gap:12px}
-  form.demo-form input,form.demo-form textarea{padding:13px 15px;border:1.5px solid #dfe3e6;border-radius:8px;font-size:1rem;font-family:inherit;background:var(--cream)}
-  form.demo-form input:focus,form.demo-form textarea:focus{outline:none;border-color:var(--amber)}
+  form.demo-form input,form.demo-form textarea{padding:13px 15px;border:1.5px solid #d8dccf;border-radius:8px;font-size:1rem;font-family:inherit;background:var(--cream)}
+  form.demo-form input:focus,form.demo-form textarea:focus{outline:none;border-color:var(--green-700)}
   form.demo-form button{border:none;cursor:pointer;font-size:1rem}
 
-  footer{background:#0d141c;color:#8fa0af;padding:40px 0;font-size:.88rem}
+  footer{background:#0b2111;color:#9fb3a0;padding:40px 0;font-size:.88rem}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
-  .demo-tag{margin-top:14px;font-size:.75rem;color:#5c6b78}
+  .demo-tag{margin-top:14px;font-size:.75rem;color:#6d7f6e}
 </style>
 </head>
 <body>
 
 <div class="topbar">
   <div class="wrap">
-    <span>61 Centre Avenue East, Altona, MB &nbsp;·&nbsp; (204) 324-5241</span>
-    <span>24-hour front desk &nbsp;·&nbsp; Free Wi-Fi &amp; parking</span>
+    <span>9118 Hwy 30 North, Altona, MB &nbsp;·&nbsp; (204) 324-6263</span>
+    <span><a href="mailto:info@elmersmfg.com">info@elmersmfg.com</a> &nbsp;·&nbsp; Parts Support: 1-204-324-1872</span>
   </div>
 </div>
 
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#">
-      <svg class="brand-mark" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="10" fill="#d99a2b"/><path d="M14 36 V16 h6 v14 h10 v6 H20 v-8" fill="#121d28"/><path d="M32 36 V16 h6 v20 Z" fill="#121d28"/></svg>
-      <span class="brand-name">ALTONA HOTEL<small>ALTONA · MANITOBA</small></span>
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="10" fill="#f0a92e"/><path d="M10 32 L24 12 L38 32 Z" fill="#0e2a16"/><rect x="21" y="24" width="6" height="10" fill="#f0a92e"/></svg>
+      <span class="brand-name">ELMER'S<small>MANUFACTURING</small></span>
     </a>
     <nav class="links">
-      <a href="#rooms">Rooms</a>
-      <a href="#amenities">Amenities</a>
-      <a href="#dining">Dining</a>
+      <a href="#products">Equipment</a>
+      <a href="#why">Why Elmer's</a>
+      <a href="#dealers">Dealers</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn nav-cta" href="#book">Book Now</a>
+    <a class="btn nav-cta" href="#dealers">Find a Dealer</a>
   </div>
 </header>
 
-<section class="hero" id="book">
-  <svg class="hero-art" viewBox="0 0 1440 620" preserveAspectRatio="xMidYMax slice">
-    <circle cx="1180" cy="150" r="80" fill="#d99a2b" opacity=".8"/>
-    <circle cx="1180" cy="150" r="120" fill="#d99a2b" opacity=".15"/>
-    <g opacity=".9">
-      <rect x="880" y="300" width="420" height="220" rx="8" fill="#0d141c"/>
-      <g fill="#d99a2b" opacity=".85">
-        <rect x="905" y="325" width="46" height="60" rx="4"/><rect x="965" y="325" width="46" height="60" rx="4"/>
-        <rect x="1025" y="325" width="46" height="60" rx="4"/><rect x="1085" y="325" width="46" height="60" rx="4"/>
-        <rect x="1145" y="325" width="46" height="60" rx="4"/><rect x="1205" y="325" width="46" height="60" rx="4"/>
-        <rect x="905" y="405" width="46" height="60" rx="4"/><rect x="965" y="405" width="46" height="60" rx="4"/>
-        <rect x="1025" y="405" width="46" height="60" rx="4"/><rect x="1085" y="405" width="46" height="60" rx="4"/>
-        <rect x="1145" y="405" width="46" height="60" rx="4"/><rect x="1205" y="405" width="46" height="60" rx="4"/>
-      </g>
-      <rect x="860" y="280" width="460" height="24" rx="6" fill="#0d141c"/>
+<section class="hero">
+  <svg class="hero-art" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0e2a16" stop-opacity="0"/>
+        <stop offset="1" stop-color="#f0a92e" stop-opacity=".28"/>
+      </linearGradient>
+    </defs>
+    <rect width="1440" height="600" fill="url(#sky)"/>
+    <circle cx="1150" cy="180" r="90" fill="#f0a92e" opacity=".85"/>
+    <circle cx="1150" cy="180" r="130" fill="#f0a92e" opacity=".18"/>
+    <g opacity=".5" stroke="#f0a92e" stroke-width="2">
+      <path d="M0 470 Q 360 430 720 470 T 1440 470" fill="none"/>
+      <path d="M0 505 Q 360 465 720 505 T 1440 505" fill="none"/>
+      <path d="M0 545 Q 360 505 720 545 T 1440 545" fill="none"/>
+      <path d="M0 585 Q 360 548 720 585 T 1440 585" fill="none"/>
     </g>
-    <g opacity=".35" stroke="#d99a2b" stroke-width="2">
-      <path d="M0 540 Q 360 510 720 540 T 1440 540" fill="none"/>
-      <path d="M0 575 Q 360 548 720 575 T 1440 575" fill="none"/>
+    <g transform="translate(180,330)" opacity=".92">
+      <rect x="0" y="40" width="300" height="90" rx="14" fill="#0b2111"/>
+      <rect x="20" y="0" width="120" height="60" rx="10" fill="#0b2111"/>
+      <rect x="30" y="10" width="100" height="34" rx="6" fill="#f0a92e" opacity=".85"/>
+      <rect x="300" y="60" width="180" height="70" rx="12" fill="#0b2111"/>
+      <circle cx="70" cy="150" r="34" fill="#0b2111" stroke="#f0a92e" stroke-width="6"/>
+      <circle cx="230" cy="150" r="34" fill="#0b2111" stroke="#f0a92e" stroke-width="6"/>
+      <circle cx="390" cy="150" r="28" fill="#0b2111" stroke="#f0a92e" stroke-width="6"/>
     </g>
   </svg>
   <div class="wrap">
-    <span class="kicker">OVER 40 ROOMS · INDOOR POOL &amp; HOT TUB</span>
-    <h1>Your home base in the <span>heart of Altona.</span></h1>
-    <p class="lead">Comfortable rooms, an indoor pool and hot tub, three on-site places to eat and drink, and staff who treat you like family — right on Centre Avenue.</p>
+    <span class="kicker">SINCE 1978 · ALTONA, MANITOBA</span>
+    <h1>Equipment that <span>simplifies</span> your harvest.</h1>
+    <p class="lead">Innovative farm equipment designed, built, and tested in the heart of the Red River Valley — for progressive farmers across the globe.</p>
     <div class="hero-ctas">
-      <a class="btn" href="#rooms">See Rooms</a>
-      <a class="btn ghost" href="#dining">Eat &amp; Drink</a>
+      <a class="btn" href="#products">Explore Equipment</a>
+      <a class="btn ghost" href="#dealers">Find a Dealer</a>
     </div>
-    <form class="booking" onsubmit="return false;" aria-label="Check availability">
-      <div><label>CHECK-IN</label><input type="date" aria-label="Check-in date"></div>
-      <div><label>CHECK-OUT</label><input type="date" aria-label="Check-out date"></div>
-      <div><label>GUESTS</label><select aria-label="Guests"><option>1 adult</option><option selected>2 adults</option><option>2 adults, 1 child</option><option>2 adults, 2 children</option><option>Group / team</option></select></div>
-      <button class="btn" type="submit">Check Availability</button>
-    </form>
+    <div class="hero-badges">
+      <div><strong>45+</strong>years building</div>
+      <div><strong>On-site</strong>designed &amp; built</div>
+      <div><strong>Worldwide</strong>dealer network</div>
+    </div>
   </div>
 </section>
 
 <div class="stats">
   <div class="wrap">
-    <div><strong>43</strong><span>GUEST ROOMS</span></div>
-    <div><strong>3</strong><span>PLACES TO EAT &amp; DRINK</span></div>
-    <div><strong>24 hr</strong><span>FRONT DESK</span></div>
-    <div><strong>Pet</strong><span>FRIENDLY ROOMS</span></div>
+    <div><strong>1978</strong><span>FOUNDED IN ALTONA</span></div>
+    <div><strong>5</strong><span>EQUIPMENT LINES</span></div>
+    <div><strong>1</strong><span>ROOF — DESIGN TO ASSEMBLY</span></div>
+    <div><strong>Growing</strong><span>DEALER NETWORK</span></div>
   </div>
 </div>
 
-<section class="block" id="rooms">
+<section class="block" id="products">
   <div class="wrap">
-    <div class="eyebrow">ROOMS &amp; SUITES</div>
-    <h2 class="title">Rest easy. Every room, every budget.</h2>
-    <p class="sub">From quick overnight stops to family tournament weekends — clean, comfortable rooms with free Wi-Fi, air conditioning, and everything you need.</p>
+    <div class="eyebrow">OUR EQUIPMENT</div>
+    <h2 class="title">Built rugged. Backed completely.</h2>
+    <p class="sub">Every machine is designed, fabricated, and assembled under one roof in Altona, Manitoba — then tested to meet the demands of real farm conditions.</p>
     <div class="grid">
       <div class="card">
-        <div class="card-art"><svg viewBox="0 0 110 110" fill="none"><rect x="20" y="48" width="70" height="34" rx="8" fill="#d99a2b"/><rect x="14" y="40" width="12" height="42" rx="6" fill="#d99a2b"/><rect x="26" y="56" width="58" height="10" rx="5" fill="#121d28" opacity=".55"/><circle cx="28" cy="92" r="7" fill="#121d28"/><circle cx="82" cy="92" r="7" fill="#121d28"/></svg></div>
-        <div class="card-body"><span class="tag">MOST POPULAR</span><h3>Queen Room</h3><p>A comfortable queen bed, work desk, flat-screen TV, and private bath — perfect for business travel or a night passing through.</p><a href="#contact">Check availability →</a></div>
+        <div class="card-art"><svg viewBox="0 0 120 120" fill="none"><rect x="18" y="52" width="84" height="34" rx="8" fill="#f0a92e"/><circle cx="36" cy="94" r="12" fill="#0e2a16"/><circle cx="84" cy="94" r="12" fill="#0e2a16"/><path d="M18 52 L34 30 H60 L52 52 Z" fill="#0e2a16"/></svg></div>
+        <div class="card-body"><h3>HaulMaster Grain Cart</h3><p>High-capacity grain carts built for fast, clean unloading in the toughest harvest conditions.</p><a href="#contact">Request specs →</a></div>
       </div>
       <div class="card">
-        <div class="card-art"><svg viewBox="0 0 110 110" fill="none"><rect x="12" y="52" width="42" height="28" rx="7" fill="#d99a2b"/><rect x="58" y="52" width="42" height="28" rx="7" fill="#d99a2b"/><rect x="12" y="44" width="10" height="36" rx="5" fill="#d99a2b"/><rect x="90" y="44" width="10" height="36" rx="5" fill="#d99a2b"/><circle cx="24" cy="90" r="6" fill="#121d28"/><circle cx="88" cy="90" r="6" fill="#121d28"/></svg></div>
-        <div class="card-body"><span class="tag">FAMILY FAVOURITE</span><h3>Double Queen Room</h3><p>Two queen beds and room to spread out — a favourite for hockey tournaments, family reunions, and wedding parties.</p><a href="#contact">Check availability →</a></div>
+        <div class="card-art"><svg viewBox="0 0 120 120" fill="none"><rect x="14" y="60" width="92" height="10" rx="5" fill="#f0a92e"/><g stroke="#f0a92e" stroke-width="5" stroke-linecap="round"><path d="M26 60 V40"/><path d="M44 60 V40"/><path d="M62 60 V40"/><path d="M80 60 V40"/><path d="M98 60 V40"/></g><circle cx="30" cy="96" r="11" fill="#0e2a16"/><circle cx="90" cy="96" r="11" fill="#0e2a16"/></svg></div>
+        <div class="card-body"><h3>Super 7 Harrow</h3><p>The revolutionary harrow for superior residue management and seedbed preparation.</p><a href="#contact">Request specs →</a></div>
       </div>
       <div class="card">
-        <div class="card-art"><svg viewBox="0 0 110 110" fill="none"><rect x="24" y="40" width="62" height="42" rx="8" fill="#d99a2b"/><rect x="32" y="48" width="20" height="14" rx="3" fill="#121d28" opacity=".6"/><rect x="58" y="48" width="20" height="26" rx="3" fill="#121d28" opacity=".35"/><circle cx="34" cy="90" r="6" fill="#121d28"/><circle cx="76" cy="90" r="6" fill="#121d28"/></svg></div>
-        <div class="card-body"><span class="tag">EXTENDED STAY</span><h3>Kitchenette Suite</h3><p>Extra space with a kitchenette — cook your own meals and settle in for longer work assignments or relocations.</p><a href="#contact">Check availability →</a></div>
+        <div class="card-art"><svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="62" r="34" stroke="#f0a92e" stroke-width="9"/><circle cx="60" cy="62" r="10" fill="#f0a92e"/><path d="M60 28 V14 M60 106 V92 M26 62 H12 M108 62 H94" stroke="#f0a92e" stroke-width="7" stroke-linecap="round"/></svg></div>
+        <div class="card-body"><h3>Wolverine Ditcher</h3><p>Rotary ditching power that cuts clean drainage ditches in a single pass.</p><a href="#contact">Request specs →</a></div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 120 120" fill="none"><rect x="22" y="48" width="76" height="40" rx="10" fill="#f0a92e"/><rect x="30" y="56" width="60" height="10" rx="5" fill="#0e2a16"/><circle cx="40" cy="96" r="11" fill="#0e2a16"/><circle cx="80" cy="96" r="11" fill="#0e2a16"/></svg></div>
+        <div class="card-body"><h3>Ravage Bale Processor</h3><p>Process round or square bales with total control — spreading or bunk feeding.</p><a href="#contact">Request specs →</a></div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 120 120" fill="none"><path d="M20 84 L44 44 H76 L100 84 Z" fill="#f0a92e"/><circle cx="38" cy="92" r="10" fill="#0e2a16"/><circle cx="82" cy="92" r="10" fill="#0e2a16"/><rect x="52" y="56" width="16" height="18" fill="#0e2a16"/></svg></div>
+        <div class="card-body"><h3>Transfer Tracks</h3><p>High-flotation track systems that keep you moving when conditions turn soft.</p><a href="#contact">Request specs →</a></div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="40" stroke="#f0a92e" stroke-width="8" stroke-dasharray="14 10"/><path d="M60 38 V82 M38 60 H82" stroke="#f0a92e" stroke-width="8" stroke-linecap="round"/></svg></div>
+        <div class="card-body"><h3>Parts &amp; Support</h3><p>Genuine parts and factory-trained support to keep your Elmer's running season after season.</p><a href="#contact">Contact support →</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="block amen" id="amenities">
+<section class="block why" id="why">
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--amber-light)">AMENITIES</div>
-    <h2 class="title">More than a place to sleep.</h2>
-    <p class="sub">Guests call it a mini-resort — everything you need for the whole weekend without leaving the block.</p>
-    <div class="amen-grid">
-      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><path d="M6 34 q5 -6 10 0 t10 0 t10 0 t10 0" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/><path d="M6 42 q5 -6 10 0 t10 0 t10 0 t10 0" stroke="#d99a2b" stroke-width="4" stroke-linecap="round" opacity=".6"/><rect x="18" y="8" width="16" height="14" rx="7" fill="#d99a2b"/></svg><h3>Indoor Pool &amp; Hot Tub</h3><p>Swim and soak year-round, whatever the Manitoba weather.</p></div>
-      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="20" r="8" fill="#d99a2b"/><path d="M14 44 q12 -14 24 0" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/></svg><h3>Pet-Friendly Rooms</h3><p>Bring the dogs — plenty of space for the whole family.</p></div>
-      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><rect x="8" y="14" width="36" height="24" rx="4" stroke="#d99a2b" stroke-width="4"/><path d="M20 44 h12 M26 38 v6" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/></svg><h3>Free Wi-Fi &amp; Parking</h3><p>Fast internet and free on-site parking for every guest.</p></div>
-      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><path d="M26 6 v12 M14 14 l8 8 M38 14 l-8 8" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/><rect x="12" y="26" width="28" height="18" rx="4" fill="#d99a2b"/></svg><h3>Fitness &amp; Games Room</h3><p>Work out, shoot pool, or unwind in the leisure room.</p></div>
-      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><rect x="10" y="10" width="32" height="22" rx="4" stroke="#d99a2b" stroke-width="4"/><path d="M10 20 h32" stroke="#d99a2b" stroke-width="4"/><circle cx="18" cy="15" r="2" fill="#d99a2b"/></svg><h3>Meeting Facilities</h3><p>Space for banquets, meetings, and community events.</p></div>
-      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><path d="M10 40 h32 M14 40 V22 h24 v18" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/><path d="M26 22 v-8 M22 18 h8" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/></svg><h3>Guest House</h3><p>The Altona Guest House — extra space for groups.</p></div>
-      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="16" stroke="#d99a2b" stroke-width="4"/><path d="M26 18 v8 l6 4" stroke="#d99a2b" stroke-width="4" stroke-linecap="round"/></svg><h3>24-Hour Front Desk</h3><p>Late arrival? Someone's always here to welcome you.</p></div>
-      <div class="amen-item"><svg viewBox="0 0 52 52" fill="none"><path d="M8 36 h36 l-4 -16 H12 Z" stroke="#d99a2b" stroke-width="4" stroke-linejoin="round"/><circle cx="18" cy="42" r="4" fill="#d99a2b"/><circle cx="34" cy="42" r="4" fill="#d99a2b"/></svg><h3>Easy Highway Access</h3><p>Minutes off the highway, in the heart of Altona.</p></div>
+    <div class="eyebrow" style="color:var(--gold-light)">WHY ELMER'S</div>
+    <h2 class="title">From our shop floor to your field.</h2>
+    <p class="sub">We listen to farmers and build what they ask for — user-friendly operation, low maintenance, and durability in every machine.</p>
+    <div class="why-grid">
+      <div class="why-item"><span class="n">1</span><h3>Designed &amp; built on-site</h3><p>From product design to fabrication to assembly, the whole manufacturing process happens in Altona — no outsourcing, no compromises.</p></div>
+      <div class="why-item"><span class="n">2</span><h3>Tested for rugged conditions</h3><p>Every machine is proven against the high demands of real farming before it ever reaches your yard.</p></div>
+      <div class="why-item"><span class="n">3</span><h3>World-class support</h3><p>From the Parts Guy to the Lead Engineer, our team stands behind every machine we build.</p></div>
+      <div class="why-item"><span class="n">4</span><h3>Farmer-driven innovation</h3><p>New products start with conversations in the field — then our engineers make them real.</p></div>
     </div>
   </div>
 </section>
 
-<section class="block" id="dining">
+<section class="block dealer" id="dealers">
   <div class="wrap">
-    <div class="eyebrow">EAT &amp; DRINK</div>
-    <h2 class="title">Three reasons to never leave the building.</h2>
-    <p class="sub">Morning coffee, a legendary burger, and a cold one — all under one roof.</p>
-    <div class="dine-grid">
-      <div class="dine"><h3>Altona Coffee House</h3><p>Start the day right with great coffee and a warm, friendly atmosphere — a local favourite in its own right.</p></div>
-      <div class="dine"><h3>Grumpies Bar &amp; Grill</h3><p>Home of the famous ClubBurger and CheeseBurger Poutine. Good food, cold drinks, and the kind of service people write reviews about.</p></div>
-      <div class="dine"><h3>The Altona Beer Store</h3><p>Grab your favourites to take back to the room — retail beer store right on-site.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="block direct">
-  <div class="wrap">
-    <h2>Book direct. Skip the middleman.</h2>
-    <p>Third-party sites take a cut of every booking. When you book with us directly, you talk to real local staff — and every dollar stays in Altona.</p>
-    <div class="direct-points"><span>✓ Talk to real local staff</span><span>✓ Free Wi-Fi &amp; parking</span><span>✓ Support a local Altona business</span></div>
-    <a class="btn" href="#contact">Book Your Stay</a>
+    <h2>Find your local Elmer's dealer.</h2>
+    <p>Our growing dealer network stretches across the prairies and beyond. Get local sales, service, and parts near you.</p>
+    <a class="btn" href="#contact">Locate a Dealer</a>
   </div>
 </section>
 
 <section class="block" id="contact">
   <div class="wrap">
     <div class="eyebrow">GET IN TOUCH</div>
-    <h2 class="title">We're here around the clock.</h2>
-    <p class="sub">Questions, group bookings, or tournament weekends — call, email, or send a message.</p>
+    <h2 class="title">Talk to the people who build it.</h2>
+    <p class="sub">Questions on specs, parts, or dealership opportunities — reach out and we'll get you answers.</p>
     <div class="contact-grid">
       <div class="contact-card">
-        <h3>Altona Hotel</h3>
-        <p><strong>Address:</strong> 61 Centre Avenue East, Altona, MB R0G 0B0</p>
-        <p><strong>Phone:</strong> (204) 324-5241</p>
-        <p><strong>Reservations:</strong> altonahotelreservations@gmail.com</p>
-        <p><strong>Check-in:</strong> 3:00 PM &nbsp;·&nbsp; <strong>Check-out:</strong> 11:00 AM</p>
-        <p><strong>Front desk:</strong> Open 24 hours</p>
+        <h3>Elmer's Manufacturing</h3>
+        <p><strong>Address:</strong> 9118 Hwy 30 North, Altona, MB R0G 0B0</p>
+        <p><strong>Phone:</strong> (204) 324-6263</p>
+        <p><strong>Email:</strong> info@elmersmfg.com</p>
+        <p><strong>Parts Support:</strong> 1-204-324-1872 · support@elmersmfg.com</p>
+        <p><strong>Hours:</strong> Mon–Fri, 8:00 AM – 5:00 PM CT</p>
       </div>
       <div class="contact-card">
-        <h3>Request a booking</h3>
+        <h3>Request information</h3>
         <form class="demo-form" onsubmit="return false;">
           <input type="text" placeholder="Your name" aria-label="Your name">
           <input type="email" placeholder="Email address" aria-label="Email address">
-          <input type="text" placeholder="Dates &amp; number of guests" aria-label="Dates and guests">
-          <textarea rows="4" placeholder="Anything we should know? (pets, group booking, late arrival…)" aria-label="Your message"></textarea>
-          <button class="btn" type="submit">Send Request</button>
+          <input type="text" placeholder="I'm interested in…" aria-label="Interest">
+          <textarea rows="4" placeholder="Your message" aria-label="Your message"></textarea>
+          <button class="btn" type="submit">Send Message</button>
         </form>
       </div>
     </div>
@@ -278,10 +273,10 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Altona Hotel · 61 Centre Avenue East, Altona, Manitoba</span>
+    <span>© 2026 Elmer's Manufacturing · Altona, Manitoba, Canada</span>
     <span>Design concept demo — created to show what's possible.</span>
   </div>
-  <div class="wrap"><p class="demo-tag">Concept demo only. Not affiliated with or endorsed by the Altona Hotel.</p></div>
+  <div class="wrap"><p class="demo-tag">Concept demo only. Not affiliated with or endorsed by Elmer's Manufacturing.</p></div>
 </footer>
 
 </body>
