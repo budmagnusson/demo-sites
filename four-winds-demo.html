@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four Winds Motel &amp; Restaurant | Sleep, Eat &amp; Unwind — Altona, Manitoba</title>
+<style>
+  :root{
+    --teal:#1f4d4a; --teal-deep:#12302e; --teal-700:#2c6b67;
+    --amber:#e0a83c; --amber-light:#f2c66d; --cream:#faf7ef; --char:#29261f; --muted:#6e6860;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--char);background:var(--cream);line-height:1.6}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+  .topbar{background:var(--teal-deep);color:#d8e4dc;font-size:.82rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:7px;padding-bottom:7px;flex-wrap:wrap;gap:4px}
+  .topbar a:hover{color:var(--amber-light)}
+
+  header.nav{background:rgba(18,48,46,.97);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(0,0,0,.3)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .brand-mark{width:42px;height:42px;flex:0 0 42px}
+  .brand-name{font-weight:800;font-size:1.2rem;letter-spacing:.5px;line-height:1.1}
+  .brand-name small{display:block;font-weight:600;font-size:.64rem;letter-spacing:2px;color:var(--amber-light)}
+  nav.links{display:flex;gap:26px;color:#eef4f0;font-weight:600;font-size:.95rem}
+  nav.links a:hover{color:var(--amber-light)}
+  .btn{display:inline-block;background:var(--amber);color:#2b2005;font-weight:800;padding:12px 28px;border-radius:8px;letter-spacing:.3px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(224,168,60,.45)}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
+  .btn.ghost:hover{border-color:var(--amber-light);color:var(--amber-light);box-shadow:none}
+  .nav-cta{font-size:.9rem;padding:10px 20px}
+  @media(max-width:880px){nav.links{display:none}}
+
+  .hero{position:relative;background:linear-gradient(180deg,#12302e 0%,#1f4d4a 60%,#2c6b67 100%);color:#fff;overflow:hidden}
+  .hero-art{position:absolute;inset:0;pointer-events:none}
+  .hero .wrap{position:relative;padding:92px 22px 100px}
+  .kicker{display:inline-block;background:rgba(224,168,60,.16);border:1px solid var(--amber);color:var(--amber-light);font-weight:700;font-size:.8rem;letter-spacing:2px;padding:7px 16px;border-radius:999px;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.05;font-weight:900;letter-spacing:-.5px;max-width:680px}
+  .hero h1 span{color:var(--amber-light)}
+  .hero p.lead{margin:20px 0 34px;max-width:600px;font-size:1.12rem;color:#e2eae4}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap;color:#d8e4dc;font-size:.9rem}
+  .hero-badges strong{display:block;font-size:1.5rem;color:#fff}
+
+  .allin{background:var(--amber);color:#2b2005}
+  .allin .wrap{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;padding-top:34px;padding-bottom:34px;gap:16px}
+  .allin strong{font-size:1.35rem;display:block;margin-bottom:4px}
+  .allin span{font-size:.9rem;font-weight:600}
+  @media(max-width:700px){.allin .wrap{grid-template-columns:1fr;row-gap:22px}}
+
+  section.block{padding:84px 0}
+  .eyebrow{color:var(--teal-700);font-weight:800;letter-spacing:3px;font-size:.78rem;margin-bottom:12px}
+  h2.title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;letter-spacing:-.5px;margin-bottom:14px;color:var(--teal-deep)}
+  p.sub{color:var(--muted);max-width:680px;margin-bottom:44px;font-size:1.05rem}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(31,77,74,.08);transition:transform .18s,box-shadow .18s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(31,77,74,.16)}
+  .card-art{height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--teal-deep),var(--teal-700))}
+  .card-art svg{width:92px;height:92px}
+  .card-body{padding:28px}
+  .card-body h3{font-size:1.25rem;margin-bottom:10px;color:var(--teal-deep)}
+  .card-body p{font-size:.95rem;color:var(--muted);margin-bottom:14px}
+  .card-body ul{list-style:none;font-size:.92rem;color:var(--char)}
+  .card-body li{padding:5px 0}
+  .card-body li::before{content:"✓ ";color:var(--teal-700);font-weight:800}
+
+  .feature{background:var(--teal-deep);color:#e2eae4}
+  .feature h2.title{color:#fff}
+  .feature p.sub{color:#a9beb6}
+  .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+  @media(max-width:760px){.feat-grid{grid-template-columns:1fr}}
+  .feat-grid .lead{font-size:1.12rem;line-height:1.75}
+  .feat-grid .lead strong{color:var(--amber-light)}
+  .check{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:30px}
+  .check h3{color:var(--amber-light);margin-bottom:14px;letter-spacing:1px;font-size:.95rem}
+  .check ul{list-style:none}
+  .check li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.98rem}
+  .check li:last-child{border-bottom:none}
+  .check li::before{content:"✓ ";color:var(--amber-light);font-weight:800}
+
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:800px){.reviews-grid{grid-template-columns:1fr}}
+  .quote{background:#fff;border-radius:16px;padding:30px;box-shadow:0 6px 24px rgba(31,77,74,.08);border-left:5px solid var(--amber);font-style:italic;color:#4a453c}
+  .quote footer{margin-top:14px;font-style:normal;font-weight:700;color:var(--teal-deep);font-size:.88rem}
+  .stars{color:var(--amber);font-style:normal;letter-spacing:2px}
+
+  .cta-band{background:linear-gradient(120deg,var(--amber) 0%,var(--amber-light) 100%);color:#2b2005;text-align:center}
+  .cta-band h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:12px}
+  .cta-band p{max-width:620px;margin:0 auto 28px;font-weight:600}
+  .cta-band .btn{background:var(--teal-deep);color:#fff}
+  .cta-band .btn:hover{box-shadow:0 8px 20px rgba(18,48,46,.4)}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
+  .contact-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 6px 24px rgba(31,77,74,.08)}
+  .contact-card h3{color:var(--teal-deep);margin-bottom:14px}
+  .contact-card p{margin-bottom:8px;color:var(--muted)}
+  .contact-card strong{color:var(--char)}
+  form.demo-form{display:flex;flex-direction:column;gap:12px}
+  form.demo-form input,form.demo-form textarea,form.demo-form select{padding:13px 15px;border:1.5px solid #ddd8c8;border-radius:8px;font-size:1rem;font-family:inherit;background:var(--cream)}
+  form.demo-form input:focus,form.demo-form textarea:focus,form.demo-form select:focus{outline:none;border-color:var(--teal-700)}
+  form.demo-form button{border:none;cursor:pointer;font-size:1rem}
+
+  footer{background:#0d211f;color:#8fa39c;padding:40px 0;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
+  .demo-tag{margin-top:14px;font-size:.75rem;color:#5c6f68}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>6163 PTH 30, Altona, MB &nbsp;·&nbsp; (204) 324-5305</span>
+    <span>Motel + Restaurant + Beer Vendor — all in one</span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="10" fill="#e0a83c"/><g stroke="#12302e" stroke-width="3.5" stroke-linecap="round"><path d="M24 10 L10 24 M24 10 L38 24 M24 10 V38"/><circle cx="24" cy="10" r="3" fill="#12302e"/></g></svg>
+      <span class="brand-name">FOUR WINDS<small>MOTEL &amp; RESTAURANT</small></span>
+    </a>
+    <nav class="links">
+      <a href="#stay">Rooms</a>
+      <a href="#dine">Restaurant</a>
+      <a href="#beer">Beer Vendor</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn nav-cta" href="#contact">Book Your Stay</a>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="hero-art" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice">
+    <circle cx="1180" cy="150" r="80" fill="#e0a83c" opacity=".8"/>
+    <circle cx="1180" cy="150" r="120" fill="#e0a83c" opacity=".15"/>
+    <g opacity=".25" stroke="#e0a83c" stroke-width="4" stroke-linecap="round">
+      <path d="M80 560 h140 M110 530 v60 M190 530 v60"/>
+      <path d="M300 570 h180 M340 535 v70 M430 535 v70"/>
+      <path d="M560 560 h120 M590 532 v56 M650 532 v56"/>
+    </g>
+    <g opacity=".15" stroke="#f2c66d" stroke-width="2">
+      <path d="M0 585 Q 360 560 720 585 T 1440 585" fill="none"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <span class="kicker">HIGHWAY 30 · ALTONA, MANITOBA</span>
+    <h1>One stop. <span>Sleep, eat &amp; unwind.</span></h1>
+    <p class="lead">A cozy motel, a restaurant known for its done-to-order breakfasts, and an on-site beer vendor — everything a road-weary traveller needs, all in one place.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#contact">Book a Room</a>
+      <a class="btn ghost" href="#dine">See the Restaurant</a>
+    </div>
+    <div class="hero-badges">
+      <div><strong>3-in-1</strong>motel · restaurant · beer vendor</div>
+      <div><strong>4.1★</strong>guest rating</div>
+      <div><strong>PTH 30</strong>easy highway access</div>
+    </div>
+  </div>
+</section>
+
+<div class="allin">
+  <div class="wrap">
+    <div><strong>🛏️ Stay</strong><span>Clean, quiet rooms with free Wi-Fi &amp; cable</span></div>
+    <div><strong>🍳 Dine</strong><span>Hearty breakfasts &amp; dinners, done to order</span></div>
+    <div><strong>🍺 Unwind</strong><span>On-site beer vendor, steps from your room</span></div>
+  </div>
+</div>
+
+<section class="block" id="stay">
+  <div class="wrap">
+    <div class="eyebrow">STAY · DINE · UNWIND</div>
+    <h2 class="title">Everything under one roof.</h2>
+    <p class="sub">Whether you're passing through on Highway 30 or working in the area for weeks, Four Winds keeps it simple: a comfortable room, good food, and friendly faces.</p>
+    <div class="grid">
+      <div class="card" id="dine-card">
+        <div class="card-art"><svg viewBox="0 0 92 92" fill="none"><rect x="14" y="34" width="64" height="34" rx="6" fill="#e0a83c"/><rect x="20" y="26" width="52" height="10" rx="5" fill="#f2c66d"/><path d="M24 68 v10 M68 68 v10" stroke="#e0a83c" stroke-width="6" stroke-linecap="round"/></svg></div>
+        <div class="card-body">
+          <h3>The Motel</h3>
+          <p>Quiet, cozy rooms with everything you need for a restful night — a favourite of workers and long-stay guests.</p>
+          <ul><li>Free Wi-Fi &amp; cable TV</li><li>Comfortable beds, cleaned daily</li><li>Quiet, small-town setting</li><li>Easy PTH 30 access &amp; parking</li></ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 92 92" fill="none"><circle cx="46" cy="46" r="26" fill="#e0a83c"/><circle cx="46" cy="46" r="17" fill="#faf7ef"/><path d="M46 20 v-8 M46 80 v-8 M20 46 h-8 M80 46 h-8" stroke="#e0a83c" stroke-width="5" stroke-linecap="round"/></svg></div>
+        <div class="card-body">
+          <h3>The Restaurant</h3>
+          <p>The reason locals keep coming back — tasty, well-prepared food with breakfast done to order.</p>
+          <ul><li>Big made-to-order breakfasts</li><li>Hearty lunches &amp; dinners</li><li>Room delivery available</li></ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 92 92" fill="none"><path d="M36 18 h20 v12 l6 8 v36 a6 6 0 0 1 -6 6 h-20 a6 6 0 0 1 -6 -6 V38 l6 -8 Z" fill="#e0a83c"/><path d="M36 44 h20" stroke="#12302e" stroke-width="5" stroke-linecap="round"/></svg></div>
+        <div class="card-body">
+          <h3>The Beer Vendor</h3>
+          <p>An on-site beer store with refreshments — unwind after a long day on the road.</p>
+          <ul><li>Beer &amp; refreshments to go</li><li>Steps from your room</li><li>Room delivery available</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block feature" id="dine">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--amber-light)">WHY GUESTS COME BACK</div>
+    <h2 class="title">Small-town hospitality, done right.</h2>
+    <p class="sub">Don't take our word for it — here's what travellers say about Four Winds.</p>
+    <div class="feat-grid">
+      <p class="lead">We're the kind of place where the <strong>staff know your name by day two</strong>, the coffee's always on, and the breakfast is cooked when you order it — not before. Workers settle in for long stays. Travellers keep coming back. <strong>That's the Four Winds way.</strong></p>
+      <div class="check">
+        <h3>GUEST FAVOURITES</h3>
+        <ul>
+          <li>Breakfast done to order — big servings</li>
+          <li>Rooms cleaned daily with fresh towels</li>
+          <li>Quiet, comfortable, and affordable</li>
+          <li>Beer delivered right to your room</li>
+          <li>Friendly staff &amp; small-town welcome</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="eyebrow">GUEST REVIEWS</div>
+    <h2 class="title">Word on the highway.</h2>
+    <p class="sub">Real reviews from real travellers.</p>
+    <div class="reviews-grid">
+      <div class="quote"><span class="stars">★★★★★</span><p>"Stayed here for a month and had absolutely no complaints. Room cleaned every day, fresh towels, and a really good restaurant attached. I would definitely return."</p><footer>— Long-stay guest</footer></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>"Food is always great. Breakfast is done to order and always great. The young guy working the seating area is very polite and friendly."</p><footer>— Restaurant guest</footer></div>
+      <div class="quote"><span class="stars">★★★★☆</span><p>"First time trying the restaurant — had a cheeseburger and fries. It tasted amazing."</p><footer>— Passing through</footer></div>
+    </div>
+  </div>
+</section>
+
+<section class="block cta-band">
+  <div class="wrap">
+    <h2>Rolling through southern Manitoba?</h2>
+    <p>Pull off Highway 30 at Altona. A clean room, a hot meal, and a cold one are waiting.</p>
+    <a class="btn" href="#contact">Book Your Stay — (204) 324-5305</a>
+  </div>
+</section>
+
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">FIND US</div>
+    <h2 class="title">Right on Highway 30.</h2>
+    <p class="sub">Call ahead to book your room or check restaurant hours — we'll keep the coffee on.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Four Winds Motel &amp; Restaurant</h3>
+        <p><strong>Address:</strong> 6163 PTH 30, Altona, MB R0G 0B0</p>
+        <p><strong>Phone:</strong> (204) 324-5305</p>
+        <p><strong>Fax:</strong> (204) 324-1721</p>
+        <p><strong>Beer vendor:</strong> (204) 324-7594</p>
+        <p>Just north of Altona on Highway 30 — easy on, easy off.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Book a room</h3>
+        <form class="demo-form" onsubmit="return false;">
+          <input type="text" placeholder="Your name" aria-label="Your name">
+          <input type="tel" placeholder="Phone number" aria-label="Phone number">
+          <select aria-label="Stay length"><option>1 night</option><option>2–6 nights</option><option>A week or more (work stay)</option></select>
+          <textarea rows="4" placeholder="Arrival date, number of guests, anything else" aria-label="Details"></textarea>
+          <button class="btn" type="submit">Request Booking</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Four Winds Motel &amp; Restaurant · Altona, Manitoba, Canada</span>
+    <span>Design concept demo — created to show what's possible.</span>
+  </div>
+  <div class="wrap"><p class="demo-tag">Concept demo only. Not affiliated with or endorsed by Four Winds Motel &amp; Restaurant.</p></div>
+</footer>
+
+</body>
+</html>
