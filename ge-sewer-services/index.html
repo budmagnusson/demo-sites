@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G&amp;E Sewer Services — Plumbing, Sewer &amp; Water Heaters | Morden, Manitoba</title>
+<meta name="description" content="G&E Sewer Services — sewer line replacement, general plumbing repairs, and water heater installation in Morden, Manitoba. Call (204) 384-8180.">
+<style>
+:root{
+  --teal:#1e4d57; --teal-deep:#123237; --warm:#f7f4ec; --amber:#d9912e;
+  --amber-deep:#a8681a; --char:#2c2c2c; --muted:#7a7568; --line:#e6dcc6; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--char);background:var(--warm);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.concept-banner{background:var(--teal-deep);color:#fff;text-align:center;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 14px}
+.site-head{background:var(--teal);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.head-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px}
+.brand{font-weight:800;font-size:1.35rem}
+.brand span{color:var(--amber)}
+.head-phone{background:var(--amber);color:#fff;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:999px;font-size:1rem;white-space:nowrap}
+.head-phone:hover{background:var(--amber-deep)}
+.hero{position:relative;color:#fff;padding:110px 0 100px;overflow:hidden;
+  background:linear-gradient(135deg,#2b6270 0%,#1e4d57 50%,#123237 100%)}
+.hero::before{content:"";position:absolute;inset:0;opacity:.12;
+  background-image:repeating-linear-gradient(90deg,transparent,transparent 70px,rgba(255,255,255,.5) 70px,rgba(255,255,255,.5) 72px)}
+.hero-inner{position:relative}
+.eyebrow{display:inline-block;background:rgba(217,145,46,.25);border:1px solid var(--amber);color:#ffdcb0;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:20px}
+.hero h1{font-size:clamp(2rem,5.2vw,3.6rem);line-height:1.12;margin-bottom:16px;max-width:16em}
+.hero h1 em{color:#efb964;font-style:normal}
+.hero p.lead{font-size:1.12rem;color:#e9e2d1;max-width:34em;margin-bottom:30px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:999px;font-size:1.02rem}
+.btn-call{background:var(--amber);color:#fff}
+.btn-call:hover{background:var(--amber-deep)}
+.btn-ghost{border:2px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.trust-row{display:flex;gap:26px;flex-wrap:wrap;margin-top:38px;color:#d3ccb8;font-size:.95rem}
+.trust-row strong{color:#fff}
+.section{padding:78px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 46px}
+.sec-head h2{font-size:clamp(1.6rem,3.4vw,2.4rem);color:var(--teal-deep);margin-bottom:12px}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:32px 26px;text-align:center;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(30,77,87,.12)}
+.card .icon{font-size:2.4rem;display:block;margin-bottom:14px}
+.card h3{color:var(--teal-deep);font-size:1.1rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.95rem}
+.why{background:var(--teal-deep);color:#fff}
+.why .sec-head h2{color:#fff}
+.why .sec-head p{color:#d3ccb8}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr}}
+.why-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:28px 24px}
+.why-item h3{color:#efb964;font-size:1.05rem;margin-bottom:10px}
+.why-item p{color:#e8e0cc;font-size:.95rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.step{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 26px;position:relative}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-20px;left:24px;width:44px;height:44px;border-radius:50%;background:var(--amber);color:#fff;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(217,145,46,.4)}
+.step h3{color:var(--teal-deep);margin:8px 0 10px;font-size:1.08rem}
+.step p{color:var(--muted);font-size:.95rem}
+.transform{background:linear-gradient(135deg,#f2e9d4 0%,#ede1c6 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.transform-box{display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+.transform-box>div:first-child{flex:1 1 320px}
+.transform-box h2{color:var(--teal-deep);font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:12px}
+.transform-box p{color:var(--muted);margin-bottom:10px}
+.transform-note{background:var(--white);border:1px dashed #c9ae82;border-radius:14px;padding:26px;flex:1 1 280px;color:var(--muted);font-size:.95rem}
+.transform-note strong{color:var(--teal-deep)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:760px){.visit{grid-template-columns:1fr}}
+.visit-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:34px 30px}
+.visit-card h3{color:var(--teal-deep);font-size:1.2rem;margin-bottom:16px}
+.visit-card p{font-size:.95rem;color:var(--muted);margin:8px 0}
+.visit-card p strong{color:var(--char)}
+.map-wrap{border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:14px 0 6px}
+.map-wrap iframe{width:100%;height:230px;border:0;display:block}
+.big-phone{display:inline-block;font-size:1.5rem;font-weight:800;color:var(--amber-deep);text-decoration:none;margin-top:10px}
+.big-phone:hover{text-decoration:underline}
+footer{background:var(--teal-deep);color:#d3ccb8;padding:40px 0 26px}
+.foot-grid{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:20px}
+.foot-grid a{color:#fff;text-decoration:none}
+.fine{font-size:.78rem;color:#968d76;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+</style>
+</head>
+<body>
+
+<div class="concept-banner">Unofficial concept demo — not affiliated with G&amp;E Sewer Services</div>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <div class="brand">G&amp;E <span>Sewer Services</span></div>
+    <a class="head-phone" href="tel:+12043848180">Call (204) 384-8180</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Morden, Manitoba</span>
+    <h1>Sewer, plumbing, and hot water — <em>one call.</em></h1>
+    <p class="lead">G&amp;E Sewer Services handles sewer line replacement, general plumbing repairs, and water heater installation in Morden and the surrounding area.</p>
+    <div class="cta-row">
+      <a class="btn btn-call" href="tel:+12043848180">Call (204) 384-8180</a>
+      <a class="btn btn-ghost" href="#services">See Services</a>
+    </div>
+    <div class="trust-row">
+      <div><strong>Local</strong> · Morden-based</div>
+      <div><strong>Sewer</strong> line replacement</div>
+      <div><strong>Plumbing</strong> &amp; water heaters</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="background:#f2e2c6;border-color:var(--amber);color:var(--amber-deep)">What they do</div>
+      <h2>When water won't cooperate</h2>
+      <p>Backed-up drains, broken sewer lines, cold showers — the jobs nobody wants to deal with alone.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="icon">🚧</span>
+        <h3>Sewer Line Replacement</h3>
+        <p>Failed or damaged sewer lines replaced properly — the big job, handled by people who do it regularly.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🔧</span>
+        <h3>General Plumbing Repairs</h3>
+        <p>Leaks, clogs, fixture problems, and the everyday plumbing fixes your home needs to keep running.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🚿</span>
+        <h3>Water Heater Installation</h3>
+        <p>Hot water tanks installed right — sized for your home, plumbed clean, and ready to run.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why G&amp;E</div>
+      <h2>Sewer work is a specialty</h2>
+      <p>Not every plumber does sewer lines. When the job goes underground, you want the crew that does it all the time.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>📍 Local to Morden</h3>
+        <p>Based at 167 Grant St in Morden. On-site fast when a sewer line or plumbing emergency can't wait.</p>
+      </div>
+      <div class="why-item">
+        <h3>🚧 Sewer specialists</h3>
+        <p>Sewer service is the name on the truck — line replacement and underground work is their bread and butter.</p>
+      </div>
+      <div class="why-item">
+        <h3>📞 One call covers it</h3>
+        <p>Sewer lines, plumbing repairs, and water heaters under one roof. Call (204) 384-8180.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="background:#f2e2c6;border-color:var(--amber);color:var(--amber-deep)">How it works</div>
+      <h2>Getting it fixed is simple</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Call and describe the problem</h3>
+        <p>Slow drains, a dead water heater, a sewer line that's given up. (204) 384-8180.</p>
+      </div>
+      <div class="step">
+        <h3>Get it diagnosed</h3>
+        <p>They'll look at what's wrong — from a fixture fix to a full sewer line replacement — and tell you straight.</p>
+      </div>
+      <div class="step">
+        <h3>Back to normal</h3>
+        <p>Repaired or replaced, tested, and cleaned up. Drains flowing, hot water back on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section transform">
+  <div class="wrap transform-box">
+    <div>
+      <h2>Photos of finished work build trust</h2>
+      <p>Nobody hires a sewer contractor sight unseen. Photos of real jobs are what turn a Google searcher into a caller.</p>
+      <p><strong>This demo ships with a photo-gallery section ready to go</strong> — job photos drop straight in the moment they're provided.</p>
+    </div>
+    <div class="transform-note">
+      <strong>📸 Photo gallery goes here.</strong><br><br>
+      Completed sewer, plumbing, and water heater jobs — before-and-after shots work best. Photos of real local work build the most trust.
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" style="background:#f2e2c6;border-color:var(--amber);color:var(--amber-deep)">Get in touch</div>
+      <h2>Call when you need them</h2>
+      <p>Sewer lines, plumbing repairs, water heaters — Morden and surrounding area.</p>
+    </div>
+    <div class="visit">
+      <div class="visit-card">
+        <h3>Find us</h3>
+        <p><strong>167 Grant St, Unit A</strong><br>Morden, MB</p>
+        <div class="map-wrap"><iframe title="Map — G&E Sewer Services, Morden" src="https://www.google.com/maps?q=167%20Grant%20St%20Unit%20A%2C%20Morden%2C%20MB&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <p>Serving Morden &amp; surrounding communities</p>
+      </div>
+      <div class="visit-card">
+        <h3>Call today</h3>
+        <p>Sewer line replacement<br>General plumbing repairs<br>Water heater installation</p>
+        <a class="big-phone" href="tel:+12043848180">(204) 384-8180</a>
+        <p style="margin-top:12px">Talk directly to the crew doing the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <strong style="color:#fff">G&amp;E Sewer Services</strong><br>
+      Plumbing · Sewer · Water Heaters<br>
+      167 Grant St Unit A, Morden, MB<br>
+      <a href="tel:+12043848180">(204) 384-8180</a>
+    </div>
+    <div>
+      Sewer Line Replacement<br>
+      General Plumbing Repairs<br>
+      Water Heater Installation
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="fine">Unofficial concept demo — created to show what's possible. Not affiliated with or endorsed by G&amp;E Sewer Services.</div>
+  </div>
+</footer>
+
+</body>
+</html>
