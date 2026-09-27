@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pioneer Meat | The Original Farmers Sausage — Altona, Manitoba</title>
+<style>
+  :root{
+    --red:#6e1f1f; --red-deep:#471313; --red-700:#8a2b2b;
+    --gold:#d9a441; --gold-light:#f0c778; --cream:#faf5ea; --char:#26211c; --muted:#6f655a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--char);background:var(--cream);line-height:1.6}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+  .topbar{background:var(--red-deep);color:#ecd9c8;font-size:.82rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:7px;padding-bottom:7px;flex-wrap:wrap;gap:4px}
+  .topbar a:hover{color:var(--gold-light)}
+
+  header.nav{background:rgba(71,19,19,.97);position:sticky;top:0;z-index:50;box-shadow:0 2px 14px rgba(0,0,0,.3)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .brand-mark{width:42px;height:42px;flex:0 0 42px}
+  .brand-name{font-weight:800;font-size:1.3rem;letter-spacing:.5px;line-height:1.1}
+  .brand-name small{display:block;font-weight:600;font-size:.66rem;letter-spacing:3px;color:var(--gold-light)}
+  nav.links{display:flex;gap:26px;color:#f3e9da;font-weight:600;font-size:.95rem}
+  nav.links a:hover{color:var(--gold-light)}
+  .btn{display:inline-block;background:var(--gold);color:#2b1c05;font-weight:800;padding:12px 28px;border-radius:8px;letter-spacing:.3px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,164,65,.45)}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
+  .btn.ghost:hover{border-color:var(--gold-light);color:var(--gold-light);box-shadow:none}
+  .nav-cta{font-size:.9rem;padding:10px 20px}
+  @media(max-width:860px){nav.links{display:none}}
+
+  .hero{position:relative;background:linear-gradient(180deg,#471313 0%,#6e1f1f 60%,#8a2b2b 100%);color:#fff;overflow:hidden}
+  .hero-art{position:absolute;inset:0;pointer-events:none}
+  .hero .wrap{position:relative;padding:92px 22px 100px}
+  .kicker{display:inline-block;background:rgba(217,164,65,.16);border:1px solid var(--gold);color:var(--gold-light);font-weight:700;font-size:.8rem;letter-spacing:2px;padding:7px 16px;border-radius:999px;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.1rem);line-height:1.05;font-weight:900;letter-spacing:-.5px;max-width:660px}
+  .hero h1 span{color:var(--gold-light)}
+  .hero p.lead{margin:20px 0 34px;max-width:580px;font-size:1.12rem;color:#f0e2cf}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-badges{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap;color:#ecd9c8;font-size:.9rem}
+  .hero-badges strong{display:block;font-size:1.5rem;color:#fff}
+
+  .stats{background:var(--gold);color:#2b1c05}
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding-top:26px;padding-bottom:26px;gap:12px}
+  .stats strong{font-size:1.9rem;display:block;line-height:1.1}
+  .stats span{font-size:.85rem;font-weight:600;letter-spacing:.5px}
+  @media(max-width:700px){.stats .wrap{grid-template-columns:repeat(2,1fr);row-gap:20px}}
+
+  section.block{padding:84px 0}
+  .eyebrow{color:var(--red-700);font-weight:800;letter-spacing:3px;font-size:.78rem;margin-bottom:12px}
+  h2.title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;letter-spacing:-.5px;margin-bottom:14px;color:var(--red-deep)}
+  p.sub{color:var(--muted);max-width:660px;margin-bottom:44px;font-size:1.05rem}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+  .card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(110,31,31,.08);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(110,31,31,.16)}
+  .card-art{height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--red-deep),var(--red-700))}
+  .card-art svg{width:96px;height:96px}
+  .card-body{padding:26px}
+  .card-body h3{font-size:1.15rem;margin-bottom:8px;color:var(--red-deep)}
+  .card-body p{font-size:.93rem;color:var(--muted);margin-bottom:16px}
+  .card-body a{color:var(--red-700);font-weight:800;font-size:.92rem}
+  .card-body a:hover{color:var(--red-deep)}
+  .tag{display:inline-block;background:#f4e6c8;color:#7a5a12;font-size:.72rem;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:999px;margin-bottom:12px}
+
+  .story{background:var(--red-deep);color:#f0e2cf}
+  .story h2.title{color:#fff}
+  .story p.sub{color:#d3b89e}
+  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
+  @media(max-width:760px){.story-grid{grid-template-columns:1fr}}
+  .story-lead{font-size:1.15rem;line-height:1.75}
+  .story-lead strong{color:var(--gold-light)}
+  .values{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:30px}
+  .values h3{color:var(--gold-light);margin-bottom:16px;letter-spacing:1px;font-size:.95rem}
+  .values ul{list-style:none}
+  .values li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.98rem}
+  .values li:last-child{border-bottom:none}
+  .values li::before{content:"✓ ";color:var(--gold-light);font-weight:800}
+
+  .buy{background:#fff;border-radius:18px;box-shadow:0 6px 24px rgba(110,31,31,.08);padding:46px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+  @media(max-width:760px){.buy{grid-template-columns:1fr;padding:32px}}
+  .buy h3{color:var(--red-deep);font-size:1.5rem;margin-bottom:12px}
+  .buy p{color:var(--muted);margin-bottom:18px}
+  .buy-list{list-style:none;margin-bottom:24px}
+  .buy-list li{padding:8px 0;color:var(--char);font-weight:600}
+  .buy-list li::before{content:"📍 ";}
+
+  .wholesale{background:linear-gradient(120deg,var(--gold) 0%,var(--gold-light) 100%);color:#2b1c05;text-align:center}
+  .wholesale h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:12px}
+  .wholesale p{max-width:620px;margin:0 auto 28px;font-weight:600}
+  .wholesale .btn{background:var(--red-deep);color:#fff}
+  .wholesale .btn:hover{box-shadow:0 8px 20px rgba(71,19,19,.4)}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
+  .contact-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 6px 24px rgba(110,31,31,.08)}
+  .contact-card h3{color:var(--red-deep);margin-bottom:14px}
+  .contact-card p{margin-bottom:8px;color:var(--muted)}
+  .contact-card strong{color:var(--char)}
+  form.demo-form{display:flex;flex-direction:column;gap:12px}
+  form.demo-form input,form.demo-form textarea,form.demo-form select{padding:13px 15px;border:1.5px solid #e3d9c8;border-radius:8px;font-size:1rem;font-family:inherit;background:var(--cream)}
+  form.demo-form input:focus,form.demo-form textarea:focus,form.demo-form select:focus{outline:none;border-color:var(--red-700)}
+  form.demo-form button{border:none;cursor:pointer;font-size:1rem}
+
+  footer{background:#2b0d0d;color:#b89a86;padding:40px 0;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
+  .demo-tag{margin-top:14px;font-size:.75rem;color:#7d6252}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Made in Altona, Manitoba &nbsp;·&nbsp; (204) 324-5454</span>
+    <span>Toll free 1-800-743-4440 &nbsp;·&nbsp; <a href="mailto:orderdesk@pioneermeat.ca">orderdesk@pioneermeat.ca</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none"><rect x="2" y="2" width="44" height="44" rx="10" fill="#d9a441"/><path d="M24 8 c-8 0 -13 6 -13 14 0 10 8 18 13 18 s13 -8 13 -18 c0 -8 -5 -14 -13 -14 Z" fill="#471313"/><circle cx="24" cy="20" r="4" fill="#d9a441"/></svg>
+      <span class="brand-name">PIONEER<small>MEAT · ALTONA MB</small></span>
+    </a>
+    <nav class="links">
+      <a href="#products">Our Sausage</a>
+      <a href="#story">Our Story</a>
+      <a href="#buy">Where to Buy</a>
+      <a href="#wholesale">Wholesale</a>
+    </nav>
+    <a class="btn nav-cta" href="#buy">Find It Near You</a>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="hero-art" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice">
+    <circle cx="1180" cy="160" r="85" fill="#d9a441" opacity=".8"/>
+    <circle cx="1180" cy="160" r="125" fill="#d9a441" opacity=".15"/>
+    <g opacity=".28">
+      <path d="M1050 420 q30 -90 60 0 q30 -90 60 0 q30 -90 60 0 q30 -90 60 0" stroke="#d9a441" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <path d="M1050 470 q30 -90 60 0 q30 -90 60 0 q30 -90 60 0 q30 -90 60 0" stroke="#d9a441" stroke-width="10" fill="none" stroke-linecap="round" opacity=".7"/>
+    </g>
+    <g opacity=".2" stroke="#f0c778" stroke-width="3">
+      <path d="M0 520 Q 360 495 720 520 T 1440 520" fill="none"/>
+      <path d="M0 560 Q 360 538 720 560 T 1440 560" fill="none"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <span class="kicker">OVER 50 YEARS · ALTONA, MANITOBA</span>
+    <h1>The original farmers sausage, <span>done right.</span></h1>
+    <p class="lead">Hickory-smoked the slow way, made with minimal ingredients and 100% gluten free — the same recipe Altona families have loved for generations.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#products">See the Lineup</a>
+      <a class="btn ghost" href="#wholesale">Stock Pioneer</a>
+    </div>
+    <div class="hero-badges">
+      <div><strong>50+</strong>years of tradition</div>
+      <div><strong>100%</strong>gluten free</div>
+      <div><strong>Local</strong>bought &amp; made</div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div><strong>50+</strong><span>YEARS OF TRADITION</span></div>
+    <div><strong>7</strong><span>SIGNATURE PRODUCTS</span></div>
+    <div><strong>0</strong><span>SHORTCUTS TAKEN</span></div>
+    <div><strong>1</strong><span>ORIGINAL RECIPE</span></div>
+  </div>
+</div>
+
+<section class="block" id="products">
+  <div class="wrap">
+    <div class="eyebrow">OUR PRODUCTS</div>
+    <h2 class="title">Farmers sausage done right.</h2>
+    <p class="sub">Every product starts with the finest pork and beef, top-quality hickory smoke, and a recipe we've guarded for over 50 years. The proof is in the tasting.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><path d="M14 52 q16 -14 34 0 t34 0" stroke="#d9a441" stroke-width="11" stroke-linecap="round"/><path d="M14 70 q16 -14 34 0 t34 0" stroke="#d9a441" stroke-width="11" stroke-linecap="round" opacity=".65"/></svg></div>
+        <div class="card-body"><span class="tag">THE ORIGINAL</span><h3>Pure Pork Farmers Sausage</h3><p>Where the magic started — the true original. Fine pork, hickory smoke, and a coarse texture that won over Altona first.</p><a href="#buy">Where to buy →</a></div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><path d="M14 52 q16 -14 34 0 t34 0" stroke="#f0c778" stroke-width="11" stroke-linecap="round"/><path d="M14 70 q16 -14 34 0 t34 0" stroke="#d9a441" stroke-width="11" stroke-linecap="round"/><circle cx="48" cy="30" r="9" fill="#d9a441"/></svg></div>
+        <div class="card-body"><span class="tag">EXTRA FLAVOUR</span><h3>Double Smoked Farmer Sausage</h3><p>For an extra kick of flavour — our hickory smoke turned all the way up. The most intense bite we make.</p><a href="#buy">Where to buy →</a></div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><ellipse cx="48" cy="54" rx="30" ry="22" fill="#d9a441"/><ellipse cx="48" cy="50" rx="22" ry="15" fill="#f0c778"/></svg></div>
+        <div class="card-body"><span class="tag">BBQ FAVOURITE</span><h3>Farmers Sausage Patties</h3><p>Our famous sausage in patty form — made for the barbecue, built for the burger.</p><a href="#buy">Where to buy →</a></div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><ellipse cx="48" cy="54" rx="30" ry="22" fill="#d9a441"/><path d="M38 44 l8 12 M50 42 l6 14 M60 46 l4 10" stroke="#471313" stroke-width="5" stroke-linecap="round"/></svg></div>
+        <div class="card-body"><span class="tag">WITH A KICK</span><h3>Jalapeño Patties</h3><p>All the flavour of our farmers sausage with real jalapeño heat. Skip the hot sauce — this brings its own.</p><a href="#buy">Where to buy →</a></div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><g stroke="#d9a441" stroke-width="10" stroke-linecap="round"><path d="M28 38 V66"/><path d="M48 38 V66"/><path d="M68 38 V66"/></g></svg></div>
+        <div class="card-body"><span class="tag">KID APPROVED</span><h3>Farmers Sausage Minis</h3><p>The taste of farmers sausage in hot-dog form — a super alternative to the same old hot dogs, great on the grill.</p><a href="#buy">Where to buy →</a></div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><rect x="22" y="36" width="52" height="30" rx="15" fill="#d9a441"/><rect x="30" y="44" width="36" height="14" rx="7" fill="#f0c778"/></svg></div>
+        <div class="card-body"><span class="tag">OLD WORLD</span><h3>Liverwurst</h3><p>An old-world favourite — mouth-watering flavour with a texture so smooth it spreads.</p><a href="#buy">Where to buy →</a></div>
+      </div>
+      <div class="card">
+        <div class="card-art"><svg viewBox="0 0 96 96" fill="none"><circle cx="48" cy="52" r="26" fill="#d9a441"/><circle cx="48" cy="52" r="16" fill="none" stroke="#471313" stroke-width="6"/></svg></div>
+        <div class="card-body"><span class="tag">DELI CLASSIC</span><h3>Homemade Beef Ring</h3><p>Fully cooked 100% beef deli meat — warm it on the grill, top with your favourite cheese, and devour.</p><a href="#buy">Where to buy →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block story" id="story">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold-light)">OUR STORY</div>
+    <h2 class="title">Fifty years. One recipe. Zero shortcuts.</h2>
+    <p class="sub">Farmers sausage might seem like a strange thing to be passionate about — but it's our passion.</p>
+    <div class="story-grid">
+      <p class="story-lead">Pioneer Meat has been a tradition in Altona, Manitoba for <strong>over 50 years</strong>. We've painstakingly developed and guarded our recipe and process — and even as the business has grown, what hasn't changed are the <strong>recipes and the principles</strong> behind them. Everything we do is dedicated to one thing: the best possible experience for our customers.</p>
+      <div class="values">
+        <h3>WHAT WE STILL BELIEVE</h3>
+        <ul>
+          <li>We still use minimal ingredients</li>
+          <li>We still sell only the freshest products</li>
+          <li>We buy and produce everything locally</li>
+          <li>We are guided by simple, strong values</li>
+          <li>All our products are gluten free</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="buy">
+  <div class="wrap">
+    <div class="buy">
+      <div>
+        <div class="eyebrow">WHERE TO BUY</div>
+        <h3>Find Pioneer on shelves near you.</h3>
+        <p>Our farmers sausage is stocked by local retailers across southern Manitoba — including Red River Co-op stores. Ask for it by name.</p>
+        <ul class="buy-list">
+          <li>Red River Co-op food stores</li>
+          <li>Local grocers &amp; butcher shops</li>
+          <li>Direct from our order desk</li>
+        </ul>
+        <a class="btn" href="#contact">Ask the Order Desk</a>
+      </div>
+      <div>
+        <div class="eyebrow">WHOLESALE &amp; RETAIL ENQUIRIES</div>
+        <h3>Carry the sausage people ask for.</h3>
+        <p>We're always looking for the right retail and foodservice partners. If your customers would love the original farmers sausage, let's talk.</p>
+        <a class="btn" href="#wholesale" style="background:var(--red-deep);color:#fff">Become a Stockist</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block wholesale" id="wholesale">
+  <div class="wrap">
+    <h2>Retailers, delis &amp; restaurants.</h2>
+    <p>Fifty years of customers asking for it by name. Join the stores and kitchens across Manitoba that stock the original farmers sausage.</p>
+    <a class="btn" href="#contact">Contact Our Order Desk</a>
+  </div>
+</section>
+
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">GET IN TOUCH</div>
+    <h2 class="title">Talk to the folks who make it.</h2>
+    <p class="sub">Orders, wholesale, or just to tell us how the sausage turned out — we'd love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Pioneer Meat</h3>
+        <p><strong>Location:</strong> Municipality of Rhineland, near Altona, MB</p>
+        <p><strong>Phone:</strong> (204) 324-5454</p>
+        <p><strong>Toll free:</strong> 1-800-743-4440</p>
+        <p><strong>Orders:</strong> orderdesk@pioneermeat.ca</p>
+        <p><strong>Hours:</strong> Mon–Fri, 8:00 AM – 4:00 PM CT</p>
+      </div>
+      <div class="contact-card">
+        <h3>Send us a message</h3>
+        <form class="demo-form" onsubmit="return false;">
+          <input type="text" placeholder="Your name" aria-label="Your name">
+          <input type="email" placeholder="Email address" aria-label="Email address">
+          <select aria-label="Reason"><option>I'm a… customer</option><option>I'm a… retailer / stockist</option><option>I'm a… restaurant / foodservice</option><option>Just saying hi</option></select>
+          <textarea rows="4" placeholder="Your message" aria-label="Your message"></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Pioneer Meat · Altona, Manitoba, Canada</span>
+    <span>Design concept demo — created to show what's possible.</span>
+  </div>
+  <div class="wrap"><p class="demo-tag">Concept demo only. Not affiliated with or endorsed by Pioneer Meat.</p></div>
+</footer>
+
+</body>
+</html>
